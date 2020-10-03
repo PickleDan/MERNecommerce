@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Footer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/airpods.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/alexa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/camera.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/mouse.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/phone.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/playstation.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/common/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Product.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/products.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +45,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\132\Desktop\projects\MERNecommerce\frontend\node_modules\prettier" />
     <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="ts.external.directory.path" value="C:\Users\132\Desktop\projects\MERNecommerce\frontend\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\src" />
+      <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\public\images" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\public" />
     </key>
@@ -81,41 +83,57 @@
       <option name="presentableId" value="Default" />
       <updated>1601543380559</updated>
       <workItem from="1601543381724" duration="7083000" />
-      <workItem from="1601648900013" duration="4978000" />
+      <workItem from="1601648900013" duration="13053000" />
     </task>
+    <task id="LOCAL-00001" summary="add bootstrap, header layout">
+      <created>1601663466629</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601663466629</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add bootstrap, header layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="add bootstrap, header layout" />
   </component>
   <component name="WindowStateProjectService">
     <state x="836" y="291" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1601659286608">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="836" y="291" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601659286608" />
+    <state x="583" y="1" key="CommitChangelistDialog2" timestamp="1601663464972">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="583" y="1" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601663464972" />
     <state x="832" y="230" key="FileChooserDialogImpl" timestamp="1601661071747">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="832" y="230" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601661071747" />
-    <state width="1899" height="275" key="GridCell.Tab.0.bottom" timestamp="1601661098796">
+    <state width="1899" height="275" key="GridCell.Tab.0.bottom" timestamp="1601714147166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601661098796" />
-    <state width="1899" height="275" key="GridCell.Tab.0.center" timestamp="1601661098796">
+    <state width="1899" height="275" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601714147166" />
+    <state width="1899" height="275" key="GridCell.Tab.0.center" timestamp="1601714147166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601661098796" />
-    <state width="1899" height="275" key="GridCell.Tab.0.left" timestamp="1601661098795">
+    <state width="1899" height="275" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601714147166" />
+    <state width="1899" height="275" key="GridCell.Tab.0.left" timestamp="1601714147166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601661098795" />
-    <state width="1899" height="275" key="GridCell.Tab.0.right" timestamp="1601661098796">
+    <state width="1899" height="275" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601714147166" />
+    <state width="1899" height="275" key="GridCell.Tab.0.right" timestamp="1601714147166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601661098796" />
-    <state x="553" y="120" key="SettingsEditor" timestamp="1601661494174">
+    <state width="1899" height="275" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601714147166" />
+    <state x="553" y="120" key="SettingsEditor" timestamp="1601713961715">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="553" y="120" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601661494174" />
+    <state x="553" y="120" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601713961715" />
   </component>
 </project>
