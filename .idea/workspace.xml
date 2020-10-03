@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/public/images/airpods.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/images/alexa.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/images/camera.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/images/mouse.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/images/phone.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/images/playstation.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/common/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Product.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/products.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Rating.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Product.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +45,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\132\Desktop\projects\MERNecommerce\frontend\node_modules\prettier" />
     <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="ts.external.directory.path" value="C:\Users\132\Desktop\projects\MERNecommerce\frontend\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -83,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601543380559</updated>
       <workItem from="1601543381724" duration="7083000" />
-      <workItem from="1601648900013" duration="13053000" />
+      <workItem from="1601648900013" duration="17060000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -92,7 +92,28 @@
       <option name="project" value="LOCAL" />
       <updated>1601663466629</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add cards of products">
+      <created>1601715714425</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601715714425</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add cards of products">
+      <created>1601715909559</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601715909559</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add unversioned files">
+      <created>1601715951286</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601715951286</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,40 +121,46 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add bootstrap, header layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="add bootstrap, header layout" />
+    <MESSAGE value="add cards of products" />
+    <MESSAGE value="add unversioned files" />
+    <option name="LAST_COMMIT_MESSAGE" value="add unversioned files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="836" y="291" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1601659286608">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="836" y="291" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601659286608" />
-    <state x="583" y="1" key="CommitChangelistDialog2" timestamp="1601663464972">
+    <state x="583" y="1" key="CommitChangelistDialog2" timestamp="1601715950036">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="583" y="1" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601663464972" />
+    <state x="583" y="1" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601715950036" />
     <state x="832" y="230" key="FileChooserDialogImpl" timestamp="1601661071747">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="832" y="230" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601661071747" />
-    <state width="1899" height="275" key="GridCell.Tab.0.bottom" timestamp="1601714147166">
+    <state width="1899" height="275" key="GridCell.Tab.0.bottom" timestamp="1601725570423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601714147166" />
-    <state width="1899" height="275" key="GridCell.Tab.0.center" timestamp="1601714147166">
+    <state width="1899" height="275" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601725570423" />
+    <state width="1899" height="275" key="GridCell.Tab.0.center" timestamp="1601725570423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601714147166" />
-    <state width="1899" height="275" key="GridCell.Tab.0.left" timestamp="1601714147166">
+    <state width="1899" height="275" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601725570423" />
+    <state width="1899" height="275" key="GridCell.Tab.0.left" timestamp="1601725570423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601714147166" />
-    <state width="1899" height="275" key="GridCell.Tab.0.right" timestamp="1601714147166">
+    <state width="1899" height="275" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601725570423" />
+    <state width="1899" height="275" key="GridCell.Tab.0.right" timestamp="1601725570423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601714147166" />
-    <state x="553" y="120" key="SettingsEditor" timestamp="1601713961715">
+    <state width="1899" height="275" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601725570423" />
+    <state x="553" y="120" key="SettingsEditor" timestamp="1601726103898">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="553" y="120" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601713961715" />
+    <state x="553" y="120" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601726103898" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1601715718532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601715718532" />
   </component>
 </project>
