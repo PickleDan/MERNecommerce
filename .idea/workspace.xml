@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Rating.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Product.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601543380559</updated>
       <workItem from="1601543381724" duration="7083000" />
-      <workItem from="1601648900013" duration="17060000" />
+      <workItem from="1601648900013" duration="21142000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -113,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601715951286</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implement react-router">
+      <created>1601726938025</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601726938025</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,21 +122,22 @@
     <MESSAGE value="add bootstrap, header layout" />
     <MESSAGE value="add cards of products" />
     <MESSAGE value="add unversioned files" />
-    <option name="LAST_COMMIT_MESSAGE" value="add unversioned files" />
+    <MESSAGE value="Implement react-router" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement react-router" />
   </component>
   <component name="WindowStateProjectService">
     <state x="836" y="291" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1601659286608">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="836" y="291" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601659286608" />
-    <state x="583" y="1" key="CommitChangelistDialog2" timestamp="1601715950036">
+    <state x="583" y="1" key="CommitChangelistDialog2" timestamp="1601726936490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="583" y="1" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601715950036" />
-    <state x="832" y="230" key="FileChooserDialogImpl" timestamp="1601661071747">
+    <state x="583" y="1" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601726936490" />
+    <state x="832" y="230" key="FileChooserDialogImpl" timestamp="1601730236362">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="832" y="230" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601661071747" />
+    <state x="832" y="230" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601730236362" />
     <state width="1899" height="275" key="GridCell.Tab.0.bottom" timestamp="1601725570423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -158,9 +158,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="553" y="120" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601726103898" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1601715718532">
+    <state x="542" y="227" key="Vcs.Push.Dialog.v2" timestamp="1601726952887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601715718532" />
+    <state x="542" y="227" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601726952887" />
   </component>
 </project>
