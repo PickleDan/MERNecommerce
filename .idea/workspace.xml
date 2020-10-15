@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
+    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="Implement Product screen">
+      <change afterPath="$PROJECT_DIR$/backend/data/products.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +26,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -42,6 +45,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\132\Desktop\projects\MERNecommerce\backend\data" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\src" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\public\images" />
@@ -75,7 +81,9 @@
       <option name="presentableId" value="Default" />
       <updated>1601543380559</updated>
       <workItem from="1601543381724" duration="7083000" />
-      <workItem from="1601648900013" duration="21142000" />
+      <workItem from="1601648900013" duration="23721000" />
+      <workItem from="1601898857047" duration="148000" />
+      <workItem from="1602784422477" duration="2070000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -112,55 +120,66 @@
       <option name="project" value="LOCAL" />
       <updated>1601726938025</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Implement Product screen">
+      <created>1601731203441</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1601731203441</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add bootstrap, header layout" />
     <MESSAGE value="add cards of products" />
     <MESSAGE value="add unversioned files" />
     <MESSAGE value="Implement react-router" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement react-router" />
+    <MESSAGE value="Implement Product screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Product screen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="836" y="291" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1601659286608">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="836" y="291" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601659286608" />
-    <state x="583" y="1" key="CommitChangelistDialog2" timestamp="1601726936490">
+    <state x="583" y="1" key="CommitChangelistDialog2" timestamp="1601756420257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="583" y="1" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601726936490" />
-    <state x="832" y="230" key="FileChooserDialogImpl" timestamp="1601730236362">
+    <state x="583" y="1" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601756420257" />
+    <state x="832" y="230" key="FileChooserDialogImpl" timestamp="1601878362261">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="832" y="230" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601730236362" />
-    <state width="1899" height="275" key="GridCell.Tab.0.bottom" timestamp="1601725570423">
+    <state x="832" y="230" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601878362261" />
+    <state width="1899" height="275" key="GridCell.Tab.0.bottom" timestamp="1602787105773">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601725570423" />
-    <state width="1899" height="275" key="GridCell.Tab.0.center" timestamp="1601725570423">
+    <state width="1899" height="275" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1602787105773" />
+    <state width="1899" height="275" key="GridCell.Tab.0.center" timestamp="1602787105772">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601725570423" />
-    <state width="1899" height="275" key="GridCell.Tab.0.left" timestamp="1601725570423">
+    <state width="1899" height="275" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1602787105772" />
+    <state width="1899" height="275" key="GridCell.Tab.0.left" timestamp="1602787105772">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601725570423" />
-    <state width="1899" height="275" key="GridCell.Tab.0.right" timestamp="1601725570423">
+    <state width="1899" height="275" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1602787105772" />
+    <state width="1899" height="275" key="GridCell.Tab.0.right" timestamp="1602787105772">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601725570423" />
+    <state width="1899" height="275" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1602787105772" />
     <state x="553" y="120" key="SettingsEditor" timestamp="1601726103898">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="553" y="120" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601726103898" />
-    <state x="542" y="227" key="Vcs.Push.Dialog.v2" timestamp="1601726952887">
+    <state x="542" y="227" key="Vcs.Push.Dialog.v2" timestamp="1601756422815">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="542" y="227" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601726952887" />
+    <state x="542" y="227" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601756422815" />
   </component>
 </project>
