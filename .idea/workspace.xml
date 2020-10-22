@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="Implement Product screen">
-      <change afterPath="$PROJECT_DIR$/backend/data/products.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/products.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +24,6 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -39,24 +41,45 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\132\Desktop\projects\MERNecommerce\frontend\node_modules\prettier" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="run.prettier.on.save" value="true" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="ts.external.directory.path" value="C:\Users\132\Desktop\projects\MERNecommerce\frontend\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\132\Desktop\projects\MERNecommerce\backend\data" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\src" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\public\images" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\public" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\132\Desktop\projects\MERNecommerce\backend\data" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.server">
+    <configuration name="server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="server" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/frontend/package.json" />
       <command value="run" />
       <scripts>
@@ -68,7 +91,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
+        <item itemvalue="npm.server" />
+        <item itemvalue="npm.start (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -83,7 +107,9 @@
       <workItem from="1601543381724" duration="7083000" />
       <workItem from="1601648900013" duration="23721000" />
       <workItem from="1601898857047" duration="148000" />
-      <workItem from="1602784422477" duration="2070000" />
+      <workItem from="1602784422477" duration="4848000" />
+      <workItem from="1602957168186" duration="1316000" />
+      <workItem from="1603346507950" duration="1453000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -127,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601731203441</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added backend server">
+      <created>1602787548624</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602787548624</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,37 +175,42 @@
     <MESSAGE value="add unversioned files" />
     <MESSAGE value="Implement react-router" />
     <MESSAGE value="Implement Product screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Product screen" />
+    <MESSAGE value="Added backend server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added backend server" />
   </component>
   <component name="WindowStateProjectService">
     <state x="836" y="291" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1601659286608">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="836" y="291" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601659286608" />
-    <state x="583" y="1" key="CommitChangelistDialog2" timestamp="1601756420257">
+    <state x="414" y="175" width="1092" height="786" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602788546986">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="583" y="1" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601756420257" />
-    <state x="832" y="230" key="FileChooserDialogImpl" timestamp="1601878362261">
+    <state x="414" y="175" width="1092" height="786" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1602788546986" />
+    <state x="583" y="1" key="CommitChangelistDialog2" timestamp="1602787547248">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="832" y="230" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601878362261" />
-    <state width="1899" height="275" key="GridCell.Tab.0.bottom" timestamp="1602787105773">
+    <state x="583" y="1" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1602787547248" />
+    <state x="832" y="230" key="FileChooserDialogImpl" timestamp="1603086806630">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1602787105773" />
-    <state width="1899" height="275" key="GridCell.Tab.0.center" timestamp="1602787105772">
+    <state x="832" y="230" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603086806630" />
+    <state width="1899" height="275" key="GridCell.Tab.0.bottom" timestamp="1603347336749">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1602787105772" />
-    <state width="1899" height="275" key="GridCell.Tab.0.left" timestamp="1602787105772">
+    <state width="1899" height="275" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603347336749" />
+    <state width="1899" height="275" key="GridCell.Tab.0.center" timestamp="1603347336749">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1602787105772" />
-    <state width="1899" height="275" key="GridCell.Tab.0.right" timestamp="1602787105772">
+    <state width="1899" height="275" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603347336749" />
+    <state width="1899" height="275" key="GridCell.Tab.0.left" timestamp="1603347336749">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1602787105772" />
+    <state width="1899" height="275" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603347336749" />
+    <state width="1899" height="275" key="GridCell.Tab.0.right" timestamp="1603347336749">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="275" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603347336749" />
     <state x="553" y="120" key="SettingsEditor" timestamp="1601726103898">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

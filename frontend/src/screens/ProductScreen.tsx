@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, match } from "react-router-dom";
-import products from "../products";
 import { Col, Row, Image, ListGroup, Card, Button } from "react-bootstrap";
 import Rating from "../components/Rating";
 import { ProductInfo } from "../common/types";
+import axios from "axios";
 
 type ProductScreenProps = {
   match: match<MatchParams>;
@@ -14,7 +14,18 @@ type MatchParams = {
 };
 
 const ProductScreen = ({ match }: ProductScreenProps) => {
-  const product = products.find((p: ProductInfo) => p._id === match.params.id);
+  const [product, setProduct] = useState<ProductInfo | undefined>();
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const { data } = await axios.get(`/api/products/${match.params.id}`);
+
+      setProduct(data);
+    };
+
+    fetchProduct();
+  }, [match]);
+
   return (
     <>
       <Link className="btn btn-light my-3" to="/">
