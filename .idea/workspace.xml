@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/products.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/data/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/data/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -109,7 +106,7 @@
       <workItem from="1601898857047" duration="148000" />
       <workItem from="1602784422477" duration="4848000" />
       <workItem from="1602957168186" duration="1316000" />
-      <workItem from="1603346507950" duration="1453000" />
+      <workItem from="1603346507950" duration="3039000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -160,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602787548624</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Server and client starts concurrently">
+      <created>1603348191094</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1603348191094</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +180,8 @@
     <MESSAGE value="Implement react-router" />
     <MESSAGE value="Implement Product screen" />
     <MESSAGE value="Added backend server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added backend server" />
+    <MESSAGE value="Server and client starts concurrently" />
+    <option name="LAST_COMMIT_MESSAGE" value="Server and client starts concurrently" />
   </component>
   <component name="WindowStateProjectService">
     <state x="836" y="291" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1601659286608">
@@ -187,10 +192,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" width="1092" height="786" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1602788546986" />
-    <state x="583" y="1" key="CommitChangelistDialog2" timestamp="1602787547248">
+    <state x="734" y="310" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603348308402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="583" y="1" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1602787547248" />
+    <state x="734" y="310" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603348308402" />
+    <state x="583" y="8" width="753" height="1030" key="CommitChangelistDialog2" timestamp="1603348189319">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="583" y="8" width="753" height="1030" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603348189319" />
     <state x="832" y="230" key="FileChooserDialogImpl" timestamp="1603086806630">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
