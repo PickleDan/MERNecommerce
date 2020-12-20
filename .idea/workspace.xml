@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/config/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/db.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603349850436</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="db connection succeed">
+      <created>1608401270316</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1608401270316</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +230,8 @@
     <MESSAGE value="Added backend server" />
     <MESSAGE value="Server and client starts concurrently" />
     <MESSAGE value="Es6 mode on in server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Es6 mode on in server" />
+    <MESSAGE value="db connection succeed" />
+    <option name="LAST_COMMIT_MESSAGE" value="db connection succeed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
