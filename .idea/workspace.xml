@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/models/orderModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/productModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/userModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608401270316</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="colors added from npm">
+      <created>1608454510580</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1608454510580</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +237,8 @@
     <MESSAGE value="Server and client starts concurrently" />
     <MESSAGE value="Es6 mode on in server" />
     <MESSAGE value="db connection succeed" />
-    <option name="LAST_COMMIT_MESSAGE" value="db connection succeed" />
+    <MESSAGE value="colors added from npm" />
+    <option name="LAST_COMMIT_MESSAGE" value="colors added from npm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
