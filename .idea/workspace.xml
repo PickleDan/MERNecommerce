@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/models/orderModal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/productModal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/userModel.js" afterDir="false" />
+    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="data models added">
+      <change afterPath="$PROJECT_DIR$/backend/data/users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/middleware/errorMiddleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/productRoutes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/seeder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/data/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/data/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +49,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\132\Desktop\projects\MERNecommerce\frontend\node_modules\prettier" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.reader.mode" />
     <property name="ts.external.directory.path" value="C:\Users\132\Desktop\projects\MERNecommerce\frontend\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -128,6 +134,9 @@
       <workItem from="1606721515247" duration="16000" />
       <workItem from="1607255452073" duration="3075000" />
       <workItem from="1608395231081" duration="3932000" />
+      <workItem from="1608554670542" duration="579000" />
+      <workItem from="1609664156279" duration="5000" />
+      <workItem from="1609664242595" duration="12339000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -206,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608454510580</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="data models added">
+      <created>1608456471506</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1608456471506</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +254,8 @@
     <MESSAGE value="Es6 mode on in server" />
     <MESSAGE value="db connection succeed" />
     <MESSAGE value="colors added from npm" />
-    <option name="LAST_COMMIT_MESSAGE" value="colors added from npm" />
+    <MESSAGE value="data models added" />
+    <option name="LAST_COMMIT_MESSAGE" value="data models added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
