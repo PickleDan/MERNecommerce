@@ -4,6 +4,8 @@ import Product from "../components/Product";
 import { ProductInfo } from "../common/types";
 import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/productActions";
+import Loader from "../components/Loader";
+import Message from "../components/Message";
 
 type HomeScreenProps = {};
 
@@ -21,9 +23,9 @@ const HomeScreen = () => {
     <>
       <h1>Новые товары</h1>
       {loading ? (
-        <h2>Загрузка...</h2>
+        <Loader />
       ) : error ? (
-        <h3>{error}</h3>
+        <Message variant="danger">{error}</Message>
       ) : (
         <Row>
           {products.map((product: ProductInfo) => (
