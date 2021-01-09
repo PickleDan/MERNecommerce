@@ -5,7 +5,7 @@ import {
 } from "../constants/productConstants";
 import axios from "axios";
 
-export const listProduct = () => async (dispatch: any) => {
+export const listProducts = () => async (dispatch: any) => {
   try {
     dispatch({ type: PRODUCT_LIST_REQUEST });
 
