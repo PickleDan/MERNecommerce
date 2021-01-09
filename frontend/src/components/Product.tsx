@@ -1,11 +1,11 @@
 import React from "react";
 import Rating from "./Rating";
 import { Card } from "react-bootstrap";
-import { ProductInfo } from "../common/types";
+import { ProductDetails } from "../common/types";
 import { Link } from "react-router-dom";
 
 type ProductProps = {
-  product: ProductInfo;
+  product: ProductDetails;
 };
 
 const Product = ({ product }: ProductProps) => {

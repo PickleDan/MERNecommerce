@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 import Product from "../components/Product";
-import { ProductInfo } from "../common/types";
+import { ProductDetails } from "../common/types";
 import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/productActions";
 import Loader from "../components/Loader";
@@ -28,7 +28,7 @@ const HomeScreen = () => {
         <Message variant="danger">{error}</Message>
       ) : (
         <Row>
-          {products.map((product: ProductInfo) => (
+          {products.map((product: ProductDetails) => (
             <Col key={product._id} sm={12} md={6} lg={3}>
               <Product product={product} />
             </Col>

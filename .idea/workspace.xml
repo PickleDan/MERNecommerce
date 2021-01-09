@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Loader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Message.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/productRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/productRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/actions/productActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/productActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/common/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Product.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/constants/productConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/productConstants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/reducers/productReducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/productReducers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +49,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\132\Desktop\projects\MERNecommerce\frontend\node_modules\prettier" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.reader.mode" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
     <property name="ts.external.directory.path" value="C:\Users\132\Desktop\projects\MERNecommerce\frontend\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -134,7 +136,7 @@
       <workItem from="1608395231081" duration="3932000" />
       <workItem from="1608554670542" duration="579000" />
       <workItem from="1609664156279" duration="5000" />
-      <workItem from="1609664242595" duration="27175000" />
+      <workItem from="1609664242595" duration="29573000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -248,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610215515837</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Message &amp;&amp; Loader Components">
+      <created>1610216647787</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1610216647787</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +304,8 @@
     <MESSAGE value="Redux added to the project" />
     <MESSAGE value="Product list reducer and action" />
     <MESSAGE value="Bringing Redux State into HomeScreen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bringing Redux State into HomeScreen" />
+    <MESSAGE value="Message &amp;&amp; Loader Components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Message &amp;&amp; Loader Components" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

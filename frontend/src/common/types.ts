@@ -1,4 +1,4 @@
-export interface ProductInfo {
+export interface ProductDetails {
   _id: string;
   name: string;
   image: Link;
@@ -12,3 +12,7 @@ export interface ProductInfo {
 }
 
 export type Link = string;
+
+export type Brand<T, U> = T & { __brand: U };
+
+export type ProductId = Brand<string, "productId">;
