@@ -1,16 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
+    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="Product details reducer &amp; action">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/data/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/data/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/data/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/data/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/middleware/errorMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/middleware/errorMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/orderModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/orderModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/productModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/productModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/userModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/productRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/productRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/seeder.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/seeder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/actions/productActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/productActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/bootstrap.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/common/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/common/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Loader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Message.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Product.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/constants/productConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/productConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Rating.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Rating.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/react-app-env.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/reducers/productReducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/productReducers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/serviceWorker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +81,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\132\Desktop\projects\MERNecommerce\frontend\node_modules\prettier" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="C:\Users\132\Desktop\projects\MERNecommerce\frontend\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -64,12 +96,22 @@
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\backend\data" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.prettier">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="prettier" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prettier" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -107,6 +149,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.prettier" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.server" />
         <item itemvalue="npm.start (1)" />
@@ -136,7 +179,7 @@
       <workItem from="1608395231081" duration="3932000" />
       <workItem from="1608554670542" duration="579000" />
       <workItem from="1609664156279" duration="5000" />
-      <workItem from="1609664242595" duration="29573000" />
+      <workItem from="1609664242595" duration="33879000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -257,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610216647787</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Product details reducer &amp; action">
+      <created>1610219102135</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1610219102135</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +355,8 @@
     <MESSAGE value="Product list reducer and action" />
     <MESSAGE value="Bringing Redux State into HomeScreen" />
     <MESSAGE value="Message &amp;&amp; Loader Components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Message &amp;&amp; Loader Components" />
+    <MESSAGE value="Product details reducer &amp; action" />
+    <option name="LAST_COMMIT_MESSAGE" value="Product details reducer &amp; action" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
