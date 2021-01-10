@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="Product details reducer &amp; action">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/mappers/productMapper.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/CartScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/config/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/db.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/data/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/data/products.js" afterDir="false" />
@@ -34,7 +32,6 @@
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Rating.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Rating.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/react-app-env.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/reducers/productReducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/productReducers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" afterDir="false" />
@@ -86,14 +83,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\132\Desktop\projects\MERNecommerce\backend\data" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\src" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\public\images" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\public" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\132\Desktop\projects\MERNecommerce\backend\data" />
     </key>
   </component>
   <component name="RunManager" selected="npm.prettier">
@@ -149,8 +146,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.prettier" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.prettier" />
         <item itemvalue="npm.server" />
         <item itemvalue="npm.start (1)" />
       </list>
@@ -179,7 +176,7 @@
       <workItem from="1608395231081" duration="3932000" />
       <workItem from="1608554670542" duration="579000" />
       <workItem from="1609664156279" duration="5000" />
-      <workItem from="1609664242595" duration="33879000" />
+      <workItem from="1609664242595" duration="39203000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -307,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610219102135</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Run prettier on all files">
+      <created>1610265704061</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1610265704061</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +360,8 @@
     <MESSAGE value="Bringing Redux State into HomeScreen" />
     <MESSAGE value="Message &amp;&amp; Loader Components" />
     <MESSAGE value="Product details reducer &amp; action" />
-    <option name="LAST_COMMIT_MESSAGE" value="Product details reducer &amp; action" />
+    <MESSAGE value="Run prettier on all files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Run prettier on all files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
