@@ -7,6 +7,7 @@ import {
   ProductListState,
   ProductState,
 } from "./reducers/productReducers";
+import * as actions from "./actions/actionCreators";
 
 export interface State {
   productList: ProductListState;
@@ -17,6 +18,10 @@ const reducer = combineReducers<State>({
   productList: productListReducer,
   productDetails: productDetailsReducer,
 });
+
+type InferValueTypes<T> = T extends { [key: string]: infer U } ? U : never;
+
+export type ActionTypes = ReturnType<InferValueTypes<typeof actions>>;
 
 const initialState = {};
 

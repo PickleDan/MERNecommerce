@@ -1,45 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/mappers/productMapper.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/screens/CartScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="Qty select &amp; add to cart button">
+      <change afterPath="$PROJECT_DIR$/frontend/src/actions/actionCreators.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/constants/cartConstants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/reducers/cartReducers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/data/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/data/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/data/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/data/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/middleware/errorMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/middleware/errorMiddleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/orderModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/orderModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/productModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/productModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/userModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/productRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/productRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/seeder.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/seeder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/actions/productActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/productActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/common/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/common/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Loader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Message.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Product.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Rating.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Rating.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/reducers/productReducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/productReducers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/serviceWorker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +39,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../work/gamification" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -87,13 +58,14 @@
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\backend\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\src\actions" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\src" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\public\images" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.prettier">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -176,7 +148,8 @@
       <workItem from="1608395231081" duration="3932000" />
       <workItem from="1608554670542" duration="579000" />
       <workItem from="1609664156279" duration="5000" />
-      <workItem from="1609664242595" duration="39203000" />
+      <workItem from="1609664242595" duration="39921000" />
+      <workItem from="1610369671500" duration="8208000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -311,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610265704061</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Qty select &amp; add to cart button">
+      <created>1610271063031</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1610271063031</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,7 +341,8 @@
     <MESSAGE value="Message &amp;&amp; Loader Components" />
     <MESSAGE value="Product details reducer &amp; action" />
     <MESSAGE value="Run prettier on all files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Run prettier on all files" />
+    <MESSAGE value="Qty select &amp; add to cart button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Qty select &amp; add to cart button" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

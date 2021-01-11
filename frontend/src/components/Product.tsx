@@ -7,16 +7,15 @@ import { Link } from "react-router-dom";
 type ProductProps = {
   product: ProductDetails;
 };
-
 const Product = ({ product }: ProductProps) => {
   return (
     <Card className="my-3 p-3 rounded">
-      <Link to={`/product/${product._id}`}>
+      <Link to={`/product/${product.productId}`}>
         <Card.Img src={product.image} variant="top" />
       </Link>
 
       <Card.Body>
-        <Link to={`/product/${product._id}`}>
+        <Link to={`/product/${product.productId}`}>
           <Card.Title as="div">
             <strong>{product.name}</strong>
           </Card.Title>

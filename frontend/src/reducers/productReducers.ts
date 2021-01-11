@@ -7,6 +7,7 @@ import {
   PRODUCT_LIST_SUCCESS,
 } from "../constants/productConstants";
 import { Link, ProductDetails, ProductId } from "../common/types";
+import { ActionTypes } from "../store";
 
 export interface ProductListState {
   loading: boolean;
@@ -21,7 +22,7 @@ const productListInitialState: ProductListState = {
 
 export const productListReducer = (
   state = productListInitialState,
-  action: any
+  action: ActionTypes
 ): ProductListState => {
   switch (action.type) {
     case PRODUCT_LIST_REQUEST:
@@ -59,7 +60,7 @@ const productInitialState: ProductState = {
 
 export const productDetailsReducer = (
   state = productInitialState,
-  action: any
+  action: ActionTypes
 ): ProductState => {
   switch (action.type) {
     case PRODUCT_DETAILS_REQUEST:

@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/productActions";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
+import { State } from "../store";
 
 type HomeScreenProps = {};
 
@@ -16,9 +17,8 @@ const HomeScreen = () => {
     dispatch(listProducts());
   }, [dispatch]);
 
-  const productList = useSelector((state: any) => state.productList);
+  const productList = useSelector((state: State) => state.productList);
   const { loading, error, products } = productList;
-
   return (
     <>
       <h1>Новые товары</h1>
