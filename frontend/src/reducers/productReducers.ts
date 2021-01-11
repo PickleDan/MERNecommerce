@@ -15,7 +15,7 @@ export interface ProductListState {
   error?: string;
 }
 
-const productListInitialState: ProductListState = {
+export const productListInitialState: ProductListState = {
   products: [],
   loading: false,
 };
@@ -42,7 +42,7 @@ export interface ProductState {
   error?: string;
 }
 
-const productInitialState: ProductState = {
+export const productInitialState: ProductState = {
   product: {
     productId: "" as ProductId,
     name: "",
