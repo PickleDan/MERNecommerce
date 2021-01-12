@@ -29,7 +29,7 @@ type MatchParams = {
 };
 
 const ProductScreen = ({ history, match }: ProductScreenProps) => {
-  const [qty, setQty] = useState<number>(0);
+  const [qty, setQty] = useState<number>(1);
 
   const dispatch = useDispatch();
 

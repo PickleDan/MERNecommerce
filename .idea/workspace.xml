@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/actions/cartActions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/actions/actionCreators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/actionCreators.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/cartReducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/cartReducers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/productReducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/productReducers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/actions/cartActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/cartActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/CartScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/CartScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ProductScreen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +145,7 @@
       <workItem from="1609664156279" duration="5000" />
       <workItem from="1609664242595" duration="39921000" />
       <workItem from="1610369671500" duration="11682000" />
+      <workItem from="1610474830771" duration="2663000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>

@@ -7,13 +7,12 @@ import { setCartItem } from "./actionCreators";
 
 export const addToCart = (id: ProductId, qty: number) => async (
   dispatch: Dispatch,
-  getState: State
+  getState: () => State
 ) => {
   const { data } = await axios.get(`/api/products/${id}`);
 
   const convertedData = productMapper(data);
 
   dispatch(setCartItem(convertedData, qty));
-
-  localStorage.setItem("cartItems", JSON.stringify(getState.cart.cartItems));
+  localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
 };
