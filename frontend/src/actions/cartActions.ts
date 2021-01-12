@@ -3,7 +3,7 @@ import { ProductId } from "../common/types";
 import { State } from "../store";
 import axios from "axios";
 import { productMapper } from "../mappers/productMapper";
-import { setCartItem } from "./actionCreators";
+import { removeItemFromCart, setCartItem } from "./actionCreators";
 
 export const addToCart = (id: ProductId, qty: number) => async (
   dispatch: Dispatch,
@@ -14,5 +14,14 @@ export const addToCart = (id: ProductId, qty: number) => async (
   const convertedData = productMapper(data);
 
   dispatch(setCartItem(convertedData, qty));
+  localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
+};
+
+export const removeFromCart = (id: ProductId) => (
+  dispatch: Dispatch,
+  getState: () => State
+) => {
+  dispatch(removeItemFromCart(id));
+
   localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
 };

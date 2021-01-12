@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link, match } from "react-router-dom";
 import { History } from "history";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../actions/cartActions";
+import { addToCart, removeFromCart } from "../actions/cartActions";
 import { ProductId } from "../common/types";
 import { State } from "../store";
 import {
@@ -44,7 +44,7 @@ const CartScreen = ({ match, location, history }: CartScreenProps) => {
   }, [dispatch, productId, qty]);
 
   const removeFromCartHandler = (id: ProductId) => {
-    console.log("remove");
+    dispatch(removeFromCart(id));
   };
 
   const checkoutHandler = () => {

@@ -8,8 +8,8 @@ import {
   PRODUCT_LIST_REQUEST,
   PRODUCT_LIST_SUCCESS,
 } from "../constants/productConstants";
-import { ProductDetails } from "../common/types";
-import { CART_ADD_ITEM } from "../constants/cartConstants";
+import { ProductDetails, ProductId } from "../common/types";
+import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "../constants/cartConstants";
 
 export const setProductListRequest = () =>
   <const>{
@@ -66,4 +66,10 @@ export const setCartItem = (cart: any, qty: number) =>
       countInStock: cart.countInStock,
       qty,
     },
+  };
+
+export const removeItemFromCart = (id: ProductId) =>
+  <const>{
+    type: CART_REMOVE_ITEM,
+    payload: id,
   };
