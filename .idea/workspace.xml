@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/controllers/productController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/actions/actionCreators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/actionCreators.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/actions/cartActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/cartActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/cartReducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/cartReducers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/CartScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/CartScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/productRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/productRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +144,7 @@
       <workItem from="1609664156279" duration="5000" />
       <workItem from="1609664242595" duration="39921000" />
       <workItem from="1610369671500" duration="11682000" />
-      <workItem from="1610474830771" duration="5670000" />
+      <workItem from="1610474830771" duration="6436000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -309,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610481290207</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Remove items from cart">
+      <created>1610481853530</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1610481853530</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +368,8 @@
     <MESSAGE value="Typescript redux actions" />
     <MESSAGE value="Add to cart functionality" />
     <MESSAGE value="Cart screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cart screen" />
+    <MESSAGE value="Remove items from cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove items from cart" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
