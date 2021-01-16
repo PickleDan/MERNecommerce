@@ -3,6 +3,7 @@ import {
   setUserLoginRequest,
   setUserLoginSuccess,
   setUserLoginFail,
+  setUserLogout,
 } from "../reducers/userReducers"
 import axios from "axios"
 
@@ -36,4 +37,9 @@ export const login = (email: string, password: string) => async (
       )
     )
   }
+}
+
+export const logout = () => (dispatch: Dispatch) => {
+  localStorage.removeItem("userInfo")
+  dispatch(setUserLogout())
 }

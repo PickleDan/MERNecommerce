@@ -14,7 +14,7 @@ const userInfoFromStorage: CartItem[] = userInfo ? JSON.parse(userInfo) : null
 
 const initialState: UserLoginState = {
   loading: false,
-  userInfo: userInfoFromStorage,
+  userInfo: userInfoFromStorage || null,
 }
 
 export const userLoginSlice = createSlice({
@@ -32,7 +32,9 @@ export const userLoginSlice = createSlice({
       state.loading = false
       state.error = action.payload
     },
-    setUserLogout() {},
+    setUserLogout(state) {
+      state.userInfo = null
+    },
   },
 })
 
@@ -40,4 +42,5 @@ export const {
   setUserLoginRequest,
   setUserLoginSuccess,
   setUserLoginFail,
+  setUserLogout,
 } = userLoginSlice.actions
