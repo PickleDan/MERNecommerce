@@ -30,6 +30,7 @@ export const userLoginSlice = createSlice({
     },
     setUserLoginFail(state, action: PayloadAction<any>) {
       state.loading = false
+      state.error = action.payload
     },
     setUserLogout() {},
   },

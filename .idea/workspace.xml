@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/actions/userActions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/reducers/userReducers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/FormContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/LoginScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/cartReducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/cartReducers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/userReducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/userReducers.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +148,7 @@
       <workItem from="1610369671500" duration="11682000" />
       <workItem from="1610474830771" duration="12733000" />
       <workItem from="1610613351950" duration="3568000" />
-      <workItem from="1610781353809" duration="11126000" />
+      <workItem from="1610781353809" duration="13151000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -356,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610788019409</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="User login state">
+      <created>1610807024746</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1610807024746</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +392,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Implement react-router" />
     <MESSAGE value="Implement Product screen" />
     <MESSAGE value="Added backend server" />
     <MESSAGE value="Server and client starts concurrently" />
@@ -413,7 +416,8 @@
     <MESSAGE value="Generate a JSON web token" />
     <MESSAGE value="Custom authentication middleware" />
     <MESSAGE value="User registration &amp; password encryption" />
-    <option name="LAST_COMMIT_MESSAGE" value="User registration &amp; password encryption" />
+    <MESSAGE value="User login state" />
+    <option name="LAST_COMMIT_MESSAGE" value="User login state" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
