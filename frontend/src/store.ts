@@ -4,7 +4,7 @@ import {
 } from "./reducers/productReducers"
 import * as actions from "./actions/actionCreators"
 import { cartReducer } from "./reducers/cartReducers"
-import { userLoginSlice } from "./reducers/userReducers"
+import { userLoginSlice, userRegisterSlice } from "./reducers/userReducers"
 import { configureStore } from "@reduxjs/toolkit"
 
 type InferValueTypes<T> = T extends { [key: string]: infer U } ? U : never
@@ -19,6 +19,7 @@ const store = configureStore({
     productDetails: productDetailsReducer,
     cart: cartReducer,
     userLogin: userLoginSlice.reducer,
+    userRegister: userRegisterSlice.reducer,
   },
 })
 
