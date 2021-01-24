@@ -66,6 +66,30 @@ export const userRegisterSlice = createSlice({
   },
 })
 
+const userDetailsInitialState: UserRegisterState = {
+  loading: false,
+  userInfo: userInfoFromStorage || null,
+  name: "",
+}
+
+export const userDetailsSlice = createSlice({
+  name: "userDetails",
+  initialState: userRegisterInitialState,
+  reducers: {
+    setUserDetailsRequest(state) {
+      state.loading = true
+    },
+    setUserDetailsSuccess(state, action: PayloadAction<any>) {
+      state.loading = false
+      state.userInfo = action.payload
+    },
+    setUserDetailsFail(state, action: PayloadAction<any>) {
+      state.loading = false
+      state.error = action.payload
+    },
+  },
+})
+
 export const {
   setUserLoginRequest,
   setUserLoginSuccess,
@@ -78,3 +102,9 @@ export const {
   setUserRegisterSuccess,
   setUserRegisterFail,
 } = userRegisterSlice.actions
+
+export const {
+  setUserDetailsRequest,
+  setUserDetailsSuccess,
+  setUserDetailsFail,
+} = userDetailsSlice.actions

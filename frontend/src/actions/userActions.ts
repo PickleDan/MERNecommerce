@@ -7,8 +7,12 @@ import {
   setUserRegisterRequest,
   setUserRegisterSuccess,
   setUserRegisterFail,
+  setUserDetailsRequest,
+  setUserDetailsSuccess,
+  setUserDetailsFail,
 } from "../reducers/userReducers"
 import axios from "axios"
+import { State } from "../store"
 
 export const login = (email: string, password: string) => async (
   dispatch: Dispatch
@@ -74,6 +78,39 @@ export const register = (
   } catch (error) {
     dispatch(
       setUserRegisterFail(
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message
+      )
+    )
+  }
+}
+
+export const getUserDetails = (id: any) => async (
+  dispatch: Dispatch,
+  getState: () => State
+) => {
+  console.log(id)
+  const {
+    userLogin: { userInfo },
+  } = getState()
+
+  try {
+    dispatch(setUserDetailsRequest())
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    }
+
+    const { data } = await axios.get(`/api/users/${id}`, config)
+
+    dispatch(setUserDetailsSuccess(data))
+  } catch (error) {
+    dispatch(
+      setUserDetailsFail(
         error.response && error.response.data.message
           ? error.response.data.message
           : error.message
