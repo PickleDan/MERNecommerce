@@ -10,6 +10,9 @@ import {
   setUserDetailsRequest,
   setUserDetailsSuccess,
   setUserDetailsFail,
+  setUserUpdateProfileRequest,
+  setUserUpdateProfileSuccess,
+  setUserUpdateProfileFail,
 } from "../reducers/userReducers"
 import axios from "axios"
 import { State } from "../store"
@@ -111,6 +114,38 @@ export const getUserDetails = (id: any) => async (
   } catch (error) {
     dispatch(
       setUserDetailsFail(
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message
+      )
+    )
+  }
+}
+
+export const updateUserProfile = (user: any) => async (
+  dispatch: Dispatch,
+  getState: () => State
+) => {
+  const {
+    userLogin: { userInfo },
+  } = getState()
+
+  try {
+    dispatch(setUserUpdateProfileRequest())
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    }
+
+    const { data } = await axios.put(`/api/users/profile`, user, config)
+
+    dispatch(setUserUpdateProfileSuccess(data))
+  } catch (error) {
+    dispatch(
+      setUserUpdateProfileFail(
         error.response && error.response.data.message
           ? error.response.data.message
           : error.message

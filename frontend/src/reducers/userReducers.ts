@@ -66,12 +66,6 @@ export const userRegisterSlice = createSlice({
   },
 })
 
-const userDetailsInitialState: UserRegisterState = {
-  loading: false,
-  userInfo: userInfoFromStorage || null,
-  name: "",
-}
-
 export const userDetailsSlice = createSlice({
   name: "userDetails",
   initialState: userRegisterInitialState,
@@ -84,6 +78,35 @@ export const userDetailsSlice = createSlice({
       state.userInfo = action.payload
     },
     setUserDetailsFail(state, action: PayloadAction<any>) {
+      state.loading = false
+      state.error = action.payload
+    },
+  },
+})
+
+export interface userUpdateProfileState extends UserLoginState {
+  success: boolean
+}
+
+const userDetailsInitialState: userUpdateProfileState = {
+  loading: false,
+  userInfo: userInfoFromStorage || null,
+  success: false,
+}
+
+export const userUpdateProfileSlice = createSlice({
+  name: "userUpdateProfile",
+  initialState: userDetailsInitialState,
+  reducers: {
+    setUserUpdateProfileRequest(state) {
+      state.loading = true
+    },
+    setUserUpdateProfileSuccess(state, action: PayloadAction<any>) {
+      state.loading = false
+      state.userInfo = action.payload
+      state.success = true
+    },
+    setUserUpdateProfileFail(state, action: PayloadAction<any>) {
       state.loading = false
       state.error = action.payload
     },
@@ -108,3 +131,9 @@ export const {
   setUserDetailsSuccess,
   setUserDetailsFail,
 } = userDetailsSlice.actions
+
+export const {
+  setUserUpdateProfileRequest,
+  setUserUpdateProfileSuccess,
+  setUserUpdateProfileFail,
+} = userUpdateProfileSlice.actions

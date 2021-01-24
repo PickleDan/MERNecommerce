@@ -8,6 +8,7 @@ import {
   userDetailsSlice,
   userLoginSlice,
   userRegisterSlice,
+  userUpdateProfileSlice,
 } from "./reducers/userReducers"
 import { configureStore } from "@reduxjs/toolkit"
 
@@ -25,6 +26,7 @@ const store = configureStore({
     userLogin: userLoginSlice.reducer,
     userRegister: userRegisterSlice.reducer,
     userDetails: userDetailsSlice.reducer,
+    userUpdateProfile: userUpdateProfileSlice.reducer,
   },
 })
 
