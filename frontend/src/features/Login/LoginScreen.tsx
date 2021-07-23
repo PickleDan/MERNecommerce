@@ -1,13 +1,13 @@
 import React, { FormEvent, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { Form, Button, Row, Col } from "react-bootstrap"
-import FormContainer from "../components/FormContainer"
+import FormContainer from "../../components/FormContainer"
 import { useDispatch, useSelector } from "react-redux"
-import { State } from "../app/store"
+import { State } from "../../app/store"
 import { History } from "history"
-import { login } from "../actions/userActions"
-import Message from "../components/Message"
-import Loader from "../components/Loader"
+import { login } from "../../actions/userActions"
+import Message from "../../components/Message"
+import Loader from "../../components/Loader"
 
 type LoginScreenProps = {
   location: Location

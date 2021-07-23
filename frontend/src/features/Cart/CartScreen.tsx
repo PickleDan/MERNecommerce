@@ -1,20 +1,15 @@
-import React, { useEffect } from "react";
-import { Link, match } from "react-router-dom";
 import { History } from "history";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart, removeFromCart } from "../actions/cartActions";
-import { ProductId } from "../common/types";
-import { State } from "../app/store";
+import React, { useEffect } from "react";
 import {
-  Col,
-  ListGroup,
-  Row,
-  Image,
-  Form,
   Button,
-  Card,
+  Card, Col, Form, Image, ListGroup,
+  Row
 } from "react-bootstrap";
-import Message from "../components/Message";
+import { Link, match } from "react-router-dom";
+import { addToCart, removeFromCart } from "./cartSlice";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { ProductId } from "../../common/types";
+import Message from "../../components/Message";
 
 type CartScreenProps = {
   match: match<MatchParams>;
@@ -31,9 +26,9 @@ const CartScreen = ({ match, location, history }: CartScreenProps) => {
 
   const qty = location.search ? location.search.split("=")[1] : 1;
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
-  const cart = useSelector((state: State) => state.cart);
+  const cart = useAppSelector((state) => state.cart);
 
   const { cartItems } = cart;
 
@@ -70,6 +65,7 @@ const CartScreen = ({ match, location, history }: CartScreenProps) => {
                   <Col md={3}>
                     <Link to={`/product/${item.product}`}>{item.name}</Link>
                   </Col>
+
                   <Col md={2}>${item.price}</Col>
                   <Col md={2}>
                     <Form.Control

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Form, Button } from 'react-bootstrap'
-import FormContainer from "../components/FormContainer"
+import FormContainer from "../../components/FormContainer"
 
 type ShippingScreenProps = {
   history?: any

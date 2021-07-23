@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { ProductDetails } from "../common/types"
-import { CartItem } from "./cartReducers"
+import { ProductDetails } from "../../common/types"
+import { CartItem } from "../Cart/cartSlice"
 
 export interface UserLoginState {
   loading: boolean

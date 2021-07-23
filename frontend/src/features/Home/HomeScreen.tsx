@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
-import Product from "../components/Product";
-import { ProductDetails } from "../common/types";
+import Product from "../../components/Product";
+import { ProductDetails } from "../../common/types";
 import { useDispatch, useSelector } from "react-redux";
-import { listProducts } from "../actions/productActions";
-import Loader from "../components/Loader";
-import Message from "../components/Message";
-import { State } from "../app/store";
+import { listProducts } from "../../actions/productActions";
+import Loader from "../../components/Loader";
+import Message from "../../components/Message";
+import { State } from "../../app/store";
 
 type HomeScreenProps = {};
 

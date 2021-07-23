@@ -13,7 +13,7 @@ import {
   setUserUpdateProfileRequest,
   setUserUpdateProfileSuccess,
   setUserUpdateProfileFail,
-} from "../reducers/userReducers"
+} from "../features/Profile/userReducers"
 import axios from "axios"
 import { State } from "../app/store"
 

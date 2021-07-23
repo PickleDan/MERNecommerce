@@ -2,15 +2,15 @@ import React, { FormEvent, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { Form, Button, Row, Col } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
-import { State } from "../app/store"
+import { State } from "../../app/store"
 import { History } from "history"
 import {
   getUserDetails,
   register,
   updateUserProfile,
-} from "../actions/userActions"
-import Message from "../components/Message"
-import Loader from "../components/Loader"
+} from "../../actions/userActions"
+import Message from "../../components/Message"
+import Loader from "../../components/Loader"
 
 type ProfileScreenProps = {
   location: Location

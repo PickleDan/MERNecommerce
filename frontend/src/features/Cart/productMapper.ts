@@ -3,7 +3,7 @@ import {
   ProductDetails,
   ProductId,
   SourceProductDetails,
-} from "../common/types";
+} from "../../common/types";
 
 export const productMapper = (data: SourceProductDetails): ProductDetails => ({
   productId: data._id as ProductId,

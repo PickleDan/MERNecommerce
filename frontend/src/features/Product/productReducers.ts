@@ -5,9 +5,9 @@ import {
   PRODUCT_LIST_FAIL,
   PRODUCT_LIST_REQUEST,
   PRODUCT_LIST_SUCCESS,
-} from "../constants/productConstants";
-import { Link, ProductDetails, ProductId } from "../common/types";
-import { ActionTypes } from "../app/store";
+} from "../../constants/productConstants";
+import { Link, ProductDetails, ProductId } from "../../common/types";
+import { ActionTypes } from "../../app/store";
 
 export interface ProductListState {
   loading: boolean;

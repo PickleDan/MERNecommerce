@@ -9,14 +9,14 @@ import {
   Button,
   Form,
 } from "react-bootstrap";
-import Rating from "../components/Rating";
+import Rating from "../../components/Rating";
 import { useDispatch, useSelector } from "react-redux";
-import { listProductDetails } from "../actions/productActions";
-import { ProductId } from "../common/types";
-import { State } from "../app/store";
-import Loader from "../components/Loader";
-import Message from "../components/Message";
-import { ProductState } from "../reducers/productReducers";
+import { listProductDetails } from "../../actions/productActions";
+import { ProductId } from "../../common/types";
+import { State } from "../../app/store";
+import Loader from "../../components/Loader";
+import Message from "../../components/Message";
+import { ProductState } from "./productReducers";
 import { History } from "history";
 
 type ProductScreenProps = {

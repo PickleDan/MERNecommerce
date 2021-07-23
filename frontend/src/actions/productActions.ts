@@ -1,6 +1,6 @@
 import axios from "axios";
 import { ProductId, SourceProductDetails } from "../common/types";
-import { productMapper } from "../mappers/productMapper";
+import { productMapper } from "../features/Cart/productMapper";
 import { Dispatch } from "redux";
 import {
   setProductDetailsFail,
