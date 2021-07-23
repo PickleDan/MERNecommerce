@@ -1,6 +1,6 @@
 import { Dispatch } from "redux";
 import { ProductId } from "../common/types";
-import { State } from "../store";
+import { State } from "../app/store";
 import axios from "axios";
 import { productMapper } from "../mappers/productMapper";
 import { removeItemFromCart, setCartItem } from "./actionCreators";

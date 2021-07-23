@@ -4,7 +4,7 @@ import { History } from "history";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 import { ProductId } from "../common/types";
-import { State } from "../store";
+import { State } from "../app/store";
 import {
   Col,
   ListGroup,

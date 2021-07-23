@@ -1,6 +1,6 @@
 import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "../constants/cartConstants"
 import { Link, ProductId } from "../common/types"
-import { ActionTypes } from "../store"
+import { ActionTypes } from "../app/store"
 
 export interface CartItem {
   product: ProductId

@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/productActions";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
-import { State } from "../store";
+import { State } from "../app/store";
 
 type HomeScreenProps = {};
 

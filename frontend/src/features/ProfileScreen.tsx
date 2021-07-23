@@ -2,7 +2,7 @@ import React, { FormEvent, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { Form, Button, Row, Col } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
-import { State } from "../store"
+import { State } from "../app/store"
 import { History } from "history"
 import {
   getUserDetails,

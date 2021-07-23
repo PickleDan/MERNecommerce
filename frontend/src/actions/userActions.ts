@@ -15,7 +15,7 @@ import {
   setUserUpdateProfileFail,
 } from "../reducers/userReducers"
 import axios from "axios"
-import { State } from "../store"
+import { State } from "../app/store"
 
 export const login = (email: string, password: string) => async (
   dispatch: Dispatch

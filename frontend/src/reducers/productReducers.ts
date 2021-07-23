@@ -7,7 +7,7 @@ import {
   PRODUCT_LIST_SUCCESS,
 } from "../constants/productConstants";
 import { Link, ProductDetails, ProductId } from "../common/types";
-import { ActionTypes } from "../store";
+import { ActionTypes } from "../app/store";
 
 export interface ProductListState {
   loading: boolean;

@@ -2,7 +2,7 @@ import React from "react"
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap"
 import { LinkContainer } from "react-router-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
-import { State } from "../store"
+import { State } from "../app/store"
 import { logout } from "../actions/userActions"
 
 const Header = () => {
