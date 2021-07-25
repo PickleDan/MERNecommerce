@@ -1,20 +1,20 @@
+import { productListSlice, productDetailsSlice } from './../features/Product/productSlice';
 import { configureStore } from "@reduxjs/toolkit"
-import cartSlice from "../features/Cart/cartSlice"
 import {
-  productDetailsReducer, productListReducer
-} from "../features/Product/productReducers"
+} from "../features/Product/productSlice"
 import {
   userDetailsSlice,
   userLoginSlice,
   userRegisterSlice,
   userUpdateProfileSlice
 } from "../features/Profile/userReducers"
+import { cartSlice } from '../features/Cart/cartSlice';
 
 const store = configureStore({
   reducer: {
-    productList: productListReducer,
-    productDetails: productDetailsReducer,
-    cart: cartSlice,
+    productList: productListSlice.reducer,
+    productDetails: productDetailsSlice.reducer,
+    cart: cartSlice.reducer,
     userLogin: userLoginSlice.reducer,
     userRegister: userRegisterSlice.reducer,
     userDetails: userDetailsSlice.reducer,

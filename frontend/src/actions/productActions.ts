@@ -1,6 +1,6 @@
 import axios from "axios";
 import { ProductId, SourceProductDetails } from "../common/types";
-import { productMapper } from "../features/Cart/productMapper";
+import { productMapper } from "../features/Cart/mapper";
 import { Dispatch } from "redux";
 import {
   setProductDetailsFail,
@@ -11,7 +11,7 @@ import {
   setProductListSuccess,
 } from "./actionCreators";
 
-//  Get product list
+
 
 export const listProducts = () => async (dispatch: Dispatch) => {
   try {

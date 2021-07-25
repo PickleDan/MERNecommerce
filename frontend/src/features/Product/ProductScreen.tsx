@@ -1,23 +1,16 @@
+import { History } from "history";
 import React, { useEffect, useState } from "react";
-import { Link, match } from "react-router-dom";
 import {
-  Col,
-  Row,
-  Image,
-  ListGroup,
-  Card,
-  Button,
-  Form,
+  Button, Card, Col, Form, Image,
+  ListGroup, Row
 } from "react-bootstrap";
-import Rating from "../../components/Rating";
 import { useDispatch, useSelector } from "react-redux";
-import { listProductDetails } from "../../actions/productActions";
-import { ProductId } from "../../common/types";
+import { Link, match } from "react-router-dom";
 import { State } from "../../app/store";
 import Loader from "../../components/Loader";
 import Message from "../../components/Message";
-import { ProductState } from "./productReducers";
-import { History } from "history";
+import Rating from "../../components/Rating";
+import { fetchProductDetails, ProductId, ProductState } from "./productSlice";
 
 type ProductScreenProps = {
   match: match<MatchParams>;
@@ -35,10 +28,10 @@ const ProductScreen = ({ history, match }: ProductScreenProps) => {
 
   const productDetails = useSelector((state: State) => state.productDetails);
 
-  const { loading, error, product }: ProductState = productDetails;
+  const { status, error, product }: ProductState = productDetails;
 
   useEffect(() => {
-    dispatch(listProductDetails(match.params.id as ProductId));
+    dispatch(fetchProductDetails(match.params.id as ProductId));
   }, [dispatch, match]);
 
   const addToCartHandler = () => {
@@ -50,9 +43,9 @@ const ProductScreen = ({ history, match }: ProductScreenProps) => {
       <Link className="btn btn-light my-3" to="/">
         Назад
       </Link>
-      {loading ? (
+      {status === "loading" ? (
         <Loader />
-      ) : error ? (
+      ) : status === "failed" ? (
         <Message variant="danger">{error}</Message>
       ) : (
         <Row>

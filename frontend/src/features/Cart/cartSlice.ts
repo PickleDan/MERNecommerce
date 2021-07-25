@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { Dispatch } from 'redux';
 import { Link, ProductId } from "../../common/types";
-import { productMapper } from './productMapper';
+import { productMapper } from './mapper';
 
 export interface CartItem {
   product: ProductId
@@ -26,7 +26,7 @@ const initialState: CartState = {
   cartItems: cartItemsFromStorage,
 }
 
-const cartSlice = createSlice({
+export const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
@@ -49,7 +49,7 @@ const cartSlice = createSlice({
 })
 
 export const { itemAdded, itemRemoved } = cartSlice.actions
-export default cartSlice.reducer
+
 
 // Thunks
 export const addToCart = (id: ProductId, qty: number) => async (

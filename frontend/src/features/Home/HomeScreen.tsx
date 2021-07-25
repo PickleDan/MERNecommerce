@@ -1,30 +1,30 @@
 import React, { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 import Product from "../../components/Product";
-import { ProductDetails } from "../../common/types";
+
 import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../../actions/productActions";
 import Loader from "../../components/Loader";
 import Message from "../../components/Message";
 import { State } from "../../app/store";
-
-type HomeScreenProps = {};
+import { useAppSelector } from "../../app/hooks";
+import { fetchListProducts, ProductDetails } from "../Product/productSlice";
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(listProducts());
+    dispatch(fetchListProducts());
   }, [dispatch]);
 
-  const productList = useSelector((state: State) => state.productList);
-  const { loading, error, products } = productList;
+  const productList = useAppSelector((state) => state.productList);
+  const { status, products, error } = productList;
   return (
     <>
       <h1>Новые товары</h1>
-      {loading ? (
+      {status === "loading" ? (
         <Loader />
-      ) : error ? (
+      ) : status === "failed" ? (
         <Message variant="danger">{error}</Message>
       ) : (
         <Row>
