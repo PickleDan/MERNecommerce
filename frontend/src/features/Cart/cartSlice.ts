@@ -2,8 +2,9 @@ import { State } from '../../app/store';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { Dispatch } from 'redux';
-import { Link, ProductId } from "../../common/types";
+import { Link } from "../../common/types";
 import { productMapper } from './mapper';
+import { ProductId } from '../Product/productSlice';
 
 export interface CartItem {
   product: ProductId
