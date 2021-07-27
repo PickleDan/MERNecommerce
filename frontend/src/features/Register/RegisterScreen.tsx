@@ -5,7 +5,7 @@ import FormContainer from "../../components/FormContainer"
 import { useDispatch, useSelector } from "react-redux"
 import { State } from "../../app/store"
 import { History } from "history"
-import { register } from "../../actions/userActions"
+import { register } from "../Profile/userSlice"
 import Message from "../../components/Message"
 import Loader from "../../components/Loader"
 
@@ -24,7 +24,7 @@ const RegisterScreen = ({ location, history }: LoginScreenProps) => {
   const dispatch = useDispatch()
 
   const userRegister = useSelector((state: State) => state.userRegister)
-  const { loading, error, userInfo } = userRegister
+  const { status, error, userInfo } = userRegister
 
   const redirect = location.search ? location.search.split("=")[1] : "/"
 
@@ -40,7 +40,7 @@ const RegisterScreen = ({ location, history }: LoginScreenProps) => {
     if (password !== confirmPassword) {
       setMessage("Пароли не совпадают")
     } else {
-      dispatch(register(name, email, password))
+      dispatch(register({ name, email, password }))
     }
   }
   return (
@@ -48,7 +48,7 @@ const RegisterScreen = ({ location, history }: LoginScreenProps) => {
       <h1>Регистрация</h1>
       {message && <Message variant={"danger"}>{message}</Message>}
       {error && <Message variant={"danger"}>{error}</Message>}
-      {loading && <Loader />}
+      {status === "loading" && <Loader />}
       <Form onSubmit={submitHandler}>
         <Form.Group>
           <Form.Label>Ваше имя</Form.Label>

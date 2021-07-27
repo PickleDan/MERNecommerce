@@ -5,9 +5,9 @@ import FormContainer from "../../components/FormContainer"
 import { useDispatch, useSelector } from "react-redux"
 import { State } from "../../app/store"
 import { History } from "history"
-import { login } from "../../actions/userActions"
 import Message from "../../components/Message"
 import Loader from "../../components/Loader"
+import { login } from "../Profile/userSlice"
 
 type LoginScreenProps = {
   location: Location
@@ -21,7 +21,7 @@ const LoginScreen = ({ location, history }: LoginScreenProps) => {
   const dispatch = useDispatch()
 
   const userLogin = useSelector((state: State) => state.userLogin)
-  const { loading, error, userInfo } = userLogin
+  const { status, error, userInfo } = userLogin
 
   const redirect = location.search ? location.search.split("=")[1] : "/"
 
@@ -33,14 +33,14 @@ const LoginScreen = ({ location, history }: LoginScreenProps) => {
 
   const submitHandler = (e: FormEvent) => {
     e.preventDefault()
-    dispatch(login(email, password))
+    dispatch(login({ email, password }))
   }
 
   return (
     <FormContainer>
       <h1>Вход</h1>
       {error && <Message variant={"danger"}>{error}</Message>}
-      {loading && <Loader />}
+      {status === "loading" && <Loader />}
       <Form onSubmit={submitHandler}>
         <Form.Group>
           <Form.Label>Email</Form.Label>

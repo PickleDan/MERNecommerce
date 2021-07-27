@@ -1,3 +1,4 @@
+import { State } from './../../app/store';
 import { Dispatch } from 'redux';
 import { RequestStatuses } from './../../common/types';
 import axios from 'axios';
@@ -20,10 +21,99 @@ const userLoginInitialState: UserLoginState = {
 }
 
 
+export const login = createAsyncThunk("login", async (loginInfo: { email: string, password: string }) => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }
+  const { data } = await axios.post(
+    "/api/users/login",
+    loginInfo,
+    config
+  )
+  localStorage.setItem("userInfo", JSON.stringify(data))
+  return data
+})
+
+export const logout = () => (dispatch: Dispatch) => {
+  localStorage.removeItem("userInfo")
+  dispatch(setUserLogout())
+}
+
+export const userLoginSlice = createSlice({
+  name: "userLogin",
+  initialState: userLoginInitialState,
+  reducers: {
+    setUserLogin(state, action: PayloadAction<any>) {
+      state.userInfo = action.payload
+    },
+    setUserLogout(state) {
+      state.userInfo = null
+    },
+  },
+  extraReducers: builder => {
+    builder.addCase(login.pending, (state) => { state.status = 'loading' })
+    builder.addCase(login.fulfilled, (state, action: PayloadAction<any>) => {
+      state.status = 'succeeded'
+      state.userInfo = action.payload
+    })
+    builder.addCase(login.rejected, (state, action) => {
+      state.status = 'failed'
+      state.error = action.error.message
+    })
+  }
+})
 
 
 
-// start
+export interface UserRegisterState extends UserLoginState {
+  name: string
+}
+
+const userRegisterInitialState: UserRegisterState = {
+  status: 'idle',
+  userInfo: userInfoFromStorage || null,
+  name: "",
+}
+
+export const register = createAsyncThunk('register', async (registerInfo: { name: string, email: string, password: string },
+  { dispatch }) => {
+
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }
+
+  const { data } = await axios.post(
+    "/api/users",
+    registerInfo,
+    config
+  )
+
+  dispatch(userLoginSlice.actions.setUserLogin(data))
+  localStorage.setItem("userInfo", JSON.stringify(data))
+  return data
+})
+
+export const userRegisterSlice = createSlice({
+  name: "userRegister",
+  initialState: userRegisterInitialState,
+  reducers: {
+  },
+  extraReducers: builder => {
+    builder.addCase(register.pending, (state) => { state.status = 'loading' })
+    builder.addCase(register.fulfilled, (state, action: PayloadAction<any>) => {
+      state.status = 'succeeded'
+      state.userInfo = action.payload
+    })
+    builder.addCase(register.rejected, (state, action) => {
+      state.status = 'failed'
+      state.error = action.error.message
+    })
+  }
+})
 
 
 export const getUserDetails = (id: any) => async (
@@ -59,6 +149,35 @@ export const getUserDetails = (id: any) => async (
   }
 }
 
+export const userDetailsSlice = createSlice({
+  name: "userDetails",
+  initialState: userRegisterInitialState,
+  reducers: {
+    setUserDetailsRequest(state) {
+      state.status = 'loading'
+    },
+    setUserDetailsSuccess(state, action: PayloadAction<any>) {
+      state.status = 'succeeded'
+      state.userInfo = action.payload
+    },
+    setUserDetailsFail(state, action: PayloadAction<any>) {
+      state.status = 'failed'
+      state.error = action.payload
+    },
+  },
+})
+
+export interface userUpdateProfileState extends UserLoginState {
+  success: boolean
+}
+
+const userDetailsInitialState: userUpdateProfileState = {
+  status: 'idle',
+  userInfo: userInfoFromStorage || null,
+  success: false,
+}
+
+
 export const updateUserProfile = (user: any) => async (
   dispatch: Dispatch,
   getState: () => State
@@ -91,163 +210,30 @@ export const updateUserProfile = (user: any) => async (
   }
 }
 
-// end
-
-
-export const login = createAsyncThunk("login", async (email, password) => {
-  const config = {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  }
-  const { data } = await axios.post(
-    "/api/users/login",
-    { email, password },
-    config
-  )
-  localStorage.setItem("userInfo", JSON.stringify(data))
-  return data
-})
-
-export const logout = () => (dispatch: Dispatch) => {
-  localStorage.removeItem("userInfo")
-  dispatch(setUserLogout())
-}
-
-export const userLoginSlice = createSlice({
-  name: "userLogin",
-  initialState: userLoginInitialState,
-  reducers: {
-    setUserLogout(state) {
-      state.userInfo = null
-    },
-  },
-  extraReducers: builder => {
-    builder.addCase(login.pending, (state) => { state.status = 'loading' })
-    builder.addCase(login.fulfilled, (state, action: PayloadAction<any>) => {
-      state.status = 'succeeded'
-      state.userInfo = action.payload
-    })
-    builder.addCase(login.rejected, (state, action) => {
-      state.status = 'failed'
-      state.error = action.error.message
-    })
-  }
-})
-
-
-
-export interface UserRegisterState extends UserLoginState {
-  name: string
-}
-
-const userRegisterInitialState: UserRegisterState = {
-  status: 'idle',
-  userInfo: userInfoFromStorage || null,
-  name: "",
-}
-
-export const register = createAsyncThunk('register', async (name: string,
-  email: string,
-  password: string) => {
-
-  const config = {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  }
-
-  const { data } = await axios.post(
-    "/api/users",
-    { name, email, password },
-    config
-  )
-
-  dispatch(setUserRegisterSuccess(data))
-  dispatch(setUserLoginSuccess(data))
-
-  localStorage.setItem("userInfo", JSON.stringify(data))
-})
-
-
-
-export const userRegisterSlice = createSlice({
-  name: "userRegister",
-  initialState: userRegisterInitialState,
-  reducers: {
-    setUserRegisterRequest(state) {
-      state.loading = true
-    },
-    setUserRegisterSuccess(state, action: PayloadAction<any>) {
-      state.loading = false
-      state.userInfo = action.payload
-    },
-    setUserRegisterFail(state, action: PayloadAction<any>) {
-      state.loading = false
-      state.error = action.payload
-    },
-  },
-})
-
-export const userDetailsSlice = createSlice({
-  name: "userDetails",
-  initialState: userRegisterInitialState,
-  reducers: {
-    setUserDetailsRequest(state) {
-      state.loading = true
-    },
-    setUserDetailsSuccess(state, action: PayloadAction<any>) {
-      state.loading = false
-      state.userInfo = action.payload
-    },
-    setUserDetailsFail(state, action: PayloadAction<any>) {
-      state.loading = false
-      state.error = action.payload
-    },
-  },
-})
-
-export interface userUpdateProfileState extends UserLoginState {
-  success: boolean
-}
-
-const userDetailsInitialState: userUpdateProfileState = {
-  loading: false,
-  userInfo: userInfoFromStorage || null,
-  success: false,
-}
 
 export const userUpdateProfileSlice = createSlice({
   name: "userUpdateProfile",
   initialState: userDetailsInitialState,
   reducers: {
     setUserUpdateProfileRequest(state) {
-      state.loading = true
+      state.status = 'loading'
     },
     setUserUpdateProfileSuccess(state, action: PayloadAction<any>) {
-      state.loading = false
+      state.status = 'succeeded'
       state.userInfo = action.payload
       state.success = true
     },
     setUserUpdateProfileFail(state, action: PayloadAction<any>) {
-      state.loading = false
+      state.status = 'failed'
       state.error = action.payload
     },
   },
 })
 
 export const {
-  setUserLoginRequest,
-  setUserLoginSuccess,
-  setUserLoginFail,
   setUserLogout,
 } = userLoginSlice.actions
 
-export const {
-  setUserRegisterRequest,
-  setUserRegisterSuccess,
-  setUserRegisterFail,
-} = userRegisterSlice.actions
 
 export const {
   setUserDetailsRequest,

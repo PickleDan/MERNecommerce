@@ -7,7 +7,7 @@ import {
   userLoginSlice,
   userRegisterSlice,
   userUpdateProfileSlice
-} from "../features/Profile/userReducers"
+} from "../features/Profile/userSlice"
 import { cartSlice } from '../features/Cart/cartSlice';
 
 const store = configureStore({

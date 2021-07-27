@@ -51,8 +51,6 @@ export const cartSlice = createSlice({
 
 export const { itemAdded, itemRemoved } = cartSlice.actions
 
-
-// Thunks
 export const addToCart = (id: ProductId, qty: number) => async (
   dispatch: Dispatch,
   getState: () => State

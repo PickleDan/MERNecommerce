@@ -8,7 +8,7 @@ import {
   getUserDetails,
   register,
   updateUserProfile,
-} from "../../actions/userActions"
+} from "./userSlice"
 import Message from "../../components/Message"
 import Loader from "../../components/Loader"
 
@@ -26,8 +26,8 @@ const ProfileScreen = ({ location, history }: ProfileScreenProps) => {
 
   const dispatch = useDispatch()
 
-  const userDetails = useSelector((state: State) => state.userDetails)
-  const { loading, error, userInfo: user } = userDetails
+  const { status, error, userInfo: user } = useSelector((state: State) => state.userDetails)
+
 
   const userLogin = useSelector((state: State) => state.userLogin)
   const { userInfo } = userLogin
@@ -66,7 +66,7 @@ const ProfileScreen = ({ location, history }: ProfileScreenProps) => {
         {message && <Message variant={"danger"}>{message}</Message>}
         {error && <Message variant={"danger"}>{error}</Message>}
         {success && <Message variant={"success"}>Профиль обновлен</Message>}
-        {loading && <Loader />}
+        {status === "loading" && <Loader />}
         <Form onSubmit={submitHandler}>
           <Form.Group>
             <Form.Label>Ваше имя</Form.Label>
