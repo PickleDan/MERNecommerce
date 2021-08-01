@@ -1,14 +1,9 @@
 import React, { FormEvent, useEffect, useState } from "react"
-import { Link } from "react-router-dom"
 import { Form, Button, Row, Col } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
 import { State } from "../../app/store"
 import { History } from "history"
-import {
-  getUserDetails,
-  register,
-  updateUserProfile,
-} from "./userSlice"
+import { getUserDetails, register, updateUserProfile } from "./userSlice"
 import Message from "../../components/Message"
 import Loader from "../../components/Loader"
 
@@ -26,8 +21,9 @@ const ProfileScreen = ({ location, history }: ProfileScreenProps) => {
 
   const dispatch = useDispatch()
 
-  const { status, error, userInfo: user } = useSelector((state: State) => state.userDetails)
-
+  const { status, error, userInfo: user } = useSelector(
+    (state: State) => state.userDetails
+  )
 
   const userLogin = useSelector((state: State) => state.userLogin)
   const { userInfo } = userLogin

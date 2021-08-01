@@ -1,50 +1,46 @@
-import { History } from "history";
-import React, { useEffect } from "react";
-import {
-  Button,
-  Card, Col, Form, Image, ListGroup,
-  Row
-} from "react-bootstrap";
-import { Link, match } from "react-router-dom";
-import { addToCart, removeFromCart } from "./cartSlice";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { ProductId } from "../../common/types";
-import Message from "../../components/Message";
+import { History } from "history"
+import React, { useEffect } from "react"
+import { Button, Card, Col, Form, Image, ListGroup, Row } from "react-bootstrap"
+import { Link, match } from "react-router-dom"
+import { addToCart, removeFromCart } from "./cartSlice"
+import { useAppDispatch, useAppSelector } from "../../app/hooks"
+import Message from "../../components/Message"
+import { ProductId } from "../Product/productSlice"
 
 type CartScreenProps = {
-  match: match<MatchParams>;
-  history: History;
-  location: Location;
-};
+  match: match<MatchParams>
+  history: History
+  location: Location
+}
 
 type MatchParams = {
-  id: string;
-};
+  id: string
+}
 
 const CartScreen = ({ match, location, history }: CartScreenProps) => {
-  const productId = match.params.id as ProductId;
+  const productId = match.params.id as ProductId
 
-  const qty = location.search ? location.search.split("=")[1] : 1;
+  const qty = location.search ? location.search.split("=")[1] : 1
 
-  const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch()
 
-  const cart = useAppSelector((state) => state.cart);
+  const cart = useAppSelector((state) => state.cart)
 
-  const { cartItems } = cart;
+  const { cartItems } = cart
 
   useEffect(() => {
     if (productId) {
-      dispatch(addToCart(productId, +qty));
+      dispatch(addToCart(productId, +qty))
     }
-  }, [dispatch, productId, qty]);
+  }, [dispatch, productId, qty])
 
   const removeFromCartHandler = (id: ProductId) => {
-    dispatch(removeFromCart(id));
-  };
+    dispatch(removeFromCart(id))
+  }
 
   const checkoutHandler = () => {
-    history.push("/login?redirect=shipping");
-  };
+    history.push("/login?redirect=shipping")
+  }
 
   return (
     <Row>
@@ -126,7 +122,7 @@ const CartScreen = ({ match, location, history }: CartScreenProps) => {
         </Card>
       </Col>
     </Row>
-  );
-};
+  )
+}
 
-export default CartScreen;
+export default CartScreen

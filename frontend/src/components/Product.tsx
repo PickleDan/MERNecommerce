@@ -1,8 +1,8 @@
 import React from "react";
 import Rating from "./Rating";
 import { Card } from "react-bootstrap";
-import { ProductDetails } from "../common/types";
 import { Link } from "react-router-dom";
+import { ProductDetails } from "../features/Product/productSlice";
 
 type ProductProps = {
   product: ProductDetails;

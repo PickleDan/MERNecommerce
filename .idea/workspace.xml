@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="Front end user Authentication &amp; Profile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Product.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/Cart/CartScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Cart/CartScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/Cart/cartSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Cart/cartSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/Profile/ProfileScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Profile/ProfileScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/Shipping/ShippingScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Shipping/ShippingScreen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +49,9 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="NEW_TOOLWINDOW_STRIPE_DEFAULTS" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../pridex" />
@@ -58,11 +73,11 @@
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\backend\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\public" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\src\actions" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\src" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\public\images" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce" />
-      <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\public" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -158,6 +173,8 @@
       <workItem from="1617302557060" duration="74000" />
       <workItem from="1617302747706" duration="2297000" />
       <workItem from="1617821676208" duration="101000" />
+      <workItem from="1627824212632" duration="495000" />
+      <workItem from="1627824734995" duration="3976000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>

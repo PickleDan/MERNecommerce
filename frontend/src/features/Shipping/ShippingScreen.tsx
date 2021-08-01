@@ -1,34 +1,44 @@
-import React, { useState } from 'react'
-import { Form, Button } from 'react-bootstrap'
+import React, { useState } from "react"
+import { Form, Button } from "react-bootstrap"
 import FormContainer from "../../components/FormContainer"
+import { useAppDispatch, useAppSelector } from "../../app/hooks"
+import { useDispatch } from "react-redux"
+import { saveShippingAddress } from "../Cart/cartSlice"
 
 type ShippingScreenProps = {
   history?: any
 }
 
-const ShippingScreen = () => {
+const ShippingScreen = ({ history }: ShippingScreenProps) => {
+  const shippingAddress = useAppSelector((state) => state.cart.shippingAddress)
 
-  const [adress, setAddress] = useState<string>('')
-  const [city, setCity] = useState<string>('')
-  const [postalCode, setPostalCode] = useState<string>('')
-  const [country, setCountry] = useState<string>('')
+  const [address, setAddress] = useState<string>(shippingAddress.address)
+  const [city, setCity] = useState<string>(shippingAddress.city)
+  const [postalCode, setPostalCode] = useState<string>(
+    shippingAddress.postalCode
+  )
+  const [country, setCountry] = useState<string>(shippingAddress.country)
+
+  const dispatch = useAppDispatch()
 
   const submitHandler = (e: React.FormEvent<HTMLElement>) => {
     e.preventDefault()
-    console.log('submit');
+    dispatch(saveShippingAddress({ address, city, country, postalCode }))
+    history.push("/payment")
   }
 
   return (
     <FormContainer>
+      <h1>Доставка</h1>
       <Form onSubmit={submitHandler}>
-        <Form.Group controlId="adress">
+        <Form.Group controlId="address">
           <Form.Label>Ваш адрес</Form.Label>
           <Form.Control
             required
             type={"text"}
-            placeholder={"Введите ваше имя"}
+            placeholder={"Введите адрес"}
             onChange={(e) => setAddress(e.target.value)}
-            value={adress}
+            value={address}
           />
         </Form.Group>
 
@@ -65,10 +75,9 @@ const ShippingScreen = () => {
           />
         </Form.Group>
 
-        <Button type='submit' variant='primary'>
+        <Button type="submit" variant="primary">
           Продолжить
         </Button>
-
       </Form>
     </FormContainer>
   )
