@@ -4,6 +4,7 @@ import FormContainer from "../../components/FormContainer"
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import { useDispatch } from "react-redux"
 import { saveShippingAddress } from "../Cart/cartSlice"
+import CheckoutSteps from "../../components/CheckoutSteps"
 
 type ShippingScreenProps = {
   history?: any
@@ -29,6 +30,7 @@ const ShippingScreen = ({ history }: ShippingScreenProps) => {
 
   return (
     <FormContainer>
+      <CheckoutSteps step1 step2 />
       <h1>Доставка</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="address">

@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="Front end user Authentication &amp; Profile">
+    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/CheckoutSteps.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Product.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/Cart/CartScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Cart/CartScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/Cart/cartSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Cart/cartSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/Profile/ProfileScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Profile/ProfileScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/features/Shipping/ShippingScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Shipping/ShippingScreen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +166,7 @@
       <workItem from="1617302747706" duration="2297000" />
       <workItem from="1617821676208" duration="101000" />
       <workItem from="1627824212632" duration="495000" />
-      <workItem from="1627824734995" duration="3976000" />
+      <workItem from="1627824734995" duration="5291000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -428,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611500632420</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Add shipping screen and save address">
+      <created>1627840405762</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1627840405762</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +459,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="data models added" />
     <MESSAGE value="Error middleware added" />
     <MESSAGE value="Redux added to the project" />
     <MESSAGE value="Product list reducer and action" />
@@ -485,7 +483,8 @@
     <MESSAGE value="Update profile endpoint" />
     <MESSAGE value="Profile screen &amp; get users details" />
     <MESSAGE value="Front end user Authentication &amp; Profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Front end user Authentication &amp; Profile" />
+    <MESSAGE value="Add shipping screen and save address" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add shipping screen and save address" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
