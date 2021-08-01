@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/CheckoutSteps.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/CheckoutSteps/CheckoutSteps.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/features/Payment/PaymentScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CheckoutSteps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CheckoutSteps/CheckoutSteps.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/Cart/cartSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Cart/cartSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/features/Shipping/ShippingScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Shipping/ShippingScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +72,11 @@
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\backend\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\src\components\CheckoutSteps" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\public" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\src\actions" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\src" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\public\images" />
-      <recent name="C:\Users\132\Desktop\projects\MERNecommerce" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -166,7 +173,7 @@
       <workItem from="1617302747706" duration="2297000" />
       <workItem from="1617821676208" duration="101000" />
       <workItem from="1627824212632" duration="495000" />
-      <workItem from="1627824734995" duration="5291000" />
+      <workItem from="1627824734995" duration="8911000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -427,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627840405762</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Add checkout steps component">
+      <created>1627842094197</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1627842094197</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +473,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Error middleware added" />
     <MESSAGE value="Redux added to the project" />
     <MESSAGE value="Product list reducer and action" />
     <MESSAGE value="Bringing Redux State into HomeScreen" />
@@ -484,7 +497,8 @@
     <MESSAGE value="Profile screen &amp; get users details" />
     <MESSAGE value="Front end user Authentication &amp; Profile" />
     <MESSAGE value="Add shipping screen and save address" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add shipping screen and save address" />
+    <MESSAGE value="Add checkout steps component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add checkout steps component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

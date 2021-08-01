@@ -22,9 +22,14 @@ export type ShippingAddress = {
   country: string
 }
 
+export enum PaymentMethod {
+  PayPal = "PAYPAL",
+}
+
 export interface CartState {
   cartItems: Array<CartItem>
   shippingAddress: ShippingAddress
+  paymentMethod: PaymentMethod
 }
 
 const cartItems = localStorage.getItem("cartItems")
@@ -38,6 +43,7 @@ const shippingAddressFromStorage = shippingAddress
 const initialState: CartState = {
   cartItems: cartItemsFromStorage,
   shippingAddress: shippingAddressFromStorage,
+  paymentMethod: PaymentMethod.PayPal,
 }
 
 export const cartSlice = createSlice({
@@ -64,10 +70,18 @@ export const cartSlice = createSlice({
     addressSaved(state, action: PayloadAction<ShippingAddress>) {
       state.shippingAddress = action.payload
     },
+    paymentMethodSaved(state, action: PayloadAction<any>) {
+      state.paymentMethod = action.payload
+    },
   },
 })
 
-export const { itemAdded, itemRemoved, addressSaved } = cartSlice.actions
+export const {
+  itemAdded,
+  itemRemoved,
+  addressSaved,
+  paymentMethodSaved,
+} = cartSlice.actions
 
 export const addToCart = (id: ProductId, qty: number) => async (
   dispatch: Dispatch,
@@ -103,4 +117,11 @@ export const saveShippingAddress = (data: ShippingAddress) => (
 ) => {
   dispatch(addressSaved(data))
   localStorage.setItem("shippingAddress", JSON.stringify(data))
+}
+
+export const savePaymentMethod = (data: PaymentMethod) => (
+  dispatch: Dispatch
+) => {
+  dispatch(paymentMethodSaved(data))
+  localStorage.setItem("paymentMethod", JSON.stringify(data))
 }

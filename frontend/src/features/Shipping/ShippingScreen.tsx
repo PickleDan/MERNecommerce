@@ -4,7 +4,7 @@ import FormContainer from "../../components/FormContainer"
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import { useDispatch } from "react-redux"
 import { saveShippingAddress } from "../Cart/cartSlice"
-import CheckoutSteps from "../../components/CheckoutSteps"
+import CheckoutSteps from "../../components/CheckoutSteps/CheckoutSteps"
 
 type ShippingScreenProps = {
   history?: any
