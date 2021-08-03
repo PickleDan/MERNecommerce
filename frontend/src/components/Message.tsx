@@ -1,14 +1,25 @@
-import React from "react";
-import { Alert } from "react-bootstrap";
+import React, { ReactChildren } from "react"
+import { Alert } from "react-bootstrap"
 
-type MessageProps = { variant: any; children: any };
+type MessageProps = {
+  variant:
+    | "primary"
+    | "secondary"
+    | "success"
+    | "danger"
+    | "warning"
+    | "info"
+    | "light"
+    | "dark"
+  children: ReactChildren
+}
 
 const Message = ({ variant, children }: MessageProps) => {
-  return <Alert variant={variant}>{children}</Alert>;
-};
+  return <Alert variant={variant}>{children}</Alert>
+}
 
 Message.defaultProps = {
   variant: "info",
-};
+}
 
-export default Message;
+export default Message

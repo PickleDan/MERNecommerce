@@ -70,7 +70,7 @@ export const cartSlice = createSlice({
     addressSaved(state, action: PayloadAction<ShippingAddress>) {
       state.shippingAddress = action.payload
     },
-    paymentMethodSaved(state, action: PayloadAction<any>) {
+    paymentMethodSaved(state, action: PayloadAction<PaymentMethod>) {
       state.paymentMethod = action.payload
     },
   },

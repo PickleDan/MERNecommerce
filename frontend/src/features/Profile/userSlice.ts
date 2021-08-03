@@ -1,40 +1,48 @@
-import { State } from './../../app/store';
-import { Dispatch } from 'redux';
-import { RequestStatuses } from './../../common/types';
-import axios from 'axios';
+import { State } from "./../../app/store"
+import { Dispatch } from "redux"
+import { Brand, RequestStatuses } from "./../../common/types"
+import axios from "axios"
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { CartItem } from "../Cart/cartSlice"
 
+export type UserId = Brand<string, "user_id">
+
+export type UserInfo = {
+  _id: UserId
+  name: string
+  email: string
+  isAdmin: boolean
+  token: string
+} | null
+
 export interface UserLoginState {
-  status: RequestStatuses,
+  status: RequestStatuses
   error?: string
-  userInfo: any
+  userInfo: UserInfo
 }
 
 const userInfo = localStorage.getItem("userInfo")
 
-const userInfoFromStorage: CartItem[] = userInfo ? JSON.parse(userInfo) : null
+const userInfoFromStorage: UserInfo = userInfo ? JSON.parse(userInfo) : null
 
 const userLoginInitialState: UserLoginState = {
-  status: 'idle',
+  status: "idle",
   userInfo: userInfoFromStorage || null,
 }
 
-
-export const login = createAsyncThunk("login", async (loginInfo: { email: string, password: string }) => {
-  const config = {
-    headers: {
-      "Content-Type": "application/json",
-    },
+export const login = createAsyncThunk(
+  "login",
+  async (loginInfo: { email: string; password: string }) => {
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+    const { data } = await axios.post("/api/users/login", loginInfo, config)
+    localStorage.setItem("userInfo", JSON.stringify(data))
+    return data
   }
-  const { data } = await axios.post(
-    "/api/users/login",
-    loginInfo,
-    config
-  )
-  localStorage.setItem("userInfo", JSON.stringify(data))
-  return data
-})
+)
 
 export const logout = () => (dispatch: Dispatch) => {
   localStorage.removeItem("userInfo")
@@ -45,82 +53,87 @@ export const userLoginSlice = createSlice({
   name: "userLogin",
   initialState: userLoginInitialState,
   reducers: {
-    setUserLogin(state, action: PayloadAction<any>) {
+    setUserLogin(state, action: PayloadAction<UserInfo>) {
       state.userInfo = action.payload
     },
     setUserLogout(state) {
       state.userInfo = null
     },
   },
-  extraReducers: builder => {
-    builder.addCase(login.pending, (state) => { state.status = 'loading' })
-    builder.addCase(login.fulfilled, (state, action: PayloadAction<any>) => {
-      state.status = 'succeeded'
-      state.userInfo = action.payload
+  extraReducers: (builder) => {
+    builder.addCase(login.pending, (state) => {
+      state.status = "loading"
     })
+    builder.addCase(
+      login.fulfilled,
+      (state, action: PayloadAction<UserInfo>) => {
+        state.status = "succeeded"
+        state.userInfo = action.payload
+      }
+    )
     builder.addCase(login.rejected, (state, action) => {
-      state.status = 'failed'
+      state.status = "failed"
       state.error = action.error.message
     })
-  }
+  },
 })
-
-
 
 export interface UserRegisterState extends UserLoginState {
   name: string
 }
 
 const userRegisterInitialState: UserRegisterState = {
-  status: 'idle',
+  status: "idle",
   userInfo: userInfoFromStorage || null,
   name: "",
 }
 
-export const register = createAsyncThunk('register', async (registerInfo: { name: string, email: string, password: string },
-  { dispatch }) => {
+export const register = createAsyncThunk(
+  "register",
+  async (
+    registerInfo: { name: string; email: string; password: string },
+    { dispatch }
+  ) => {
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
 
-  const config = {
-    headers: {
-      "Content-Type": "application/json",
-    },
+    const { data } = await axios.post("/api/users", registerInfo, config)
+
+    dispatch(userLoginSlice.actions.setUserLogin(data))
+    localStorage.setItem("userInfo", JSON.stringify(data))
+    return data
   }
-
-  const { data } = await axios.post(
-    "/api/users",
-    registerInfo,
-    config
-  )
-
-  dispatch(userLoginSlice.actions.setUserLogin(data))
-  localStorage.setItem("userInfo", JSON.stringify(data))
-  return data
-})
+)
 
 export const userRegisterSlice = createSlice({
   name: "userRegister",
   initialState: userRegisterInitialState,
-  reducers: {
-  },
-  extraReducers: builder => {
-    builder.addCase(register.pending, (state) => { state.status = 'loading' })
-    builder.addCase(register.fulfilled, (state, action: PayloadAction<any>) => {
-      state.status = 'succeeded'
-      state.userInfo = action.payload
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(register.pending, (state) => {
+      state.status = "loading"
     })
+    builder.addCase(
+      register.fulfilled,
+      (state, action: PayloadAction<UserInfo>) => {
+        state.status = "succeeded"
+        state.userInfo = action.payload
+      }
+    )
     builder.addCase(register.rejected, (state, action) => {
-      state.status = 'failed'
+      state.status = "failed"
       state.error = action.error.message
     })
-  }
+  },
 })
 
-
-export const getUserDetails = (id: any) => async (
+export const getUserDetails = (id: UserId) => async (
   dispatch: Dispatch,
   getState: () => State
 ) => {
-  console.log(id)
   const {
     userLogin: { userInfo },
   } = getState()
@@ -131,7 +144,7 @@ export const getUserDetails = (id: any) => async (
     const config = {
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${userInfo.token}`,
+        Authorization: `Bearer ${userInfo?.token}`,
       },
     }
 
@@ -154,14 +167,14 @@ export const userDetailsSlice = createSlice({
   initialState: userRegisterInitialState,
   reducers: {
     setUserDetailsRequest(state) {
-      state.status = 'loading'
+      state.status = "loading"
     },
-    setUserDetailsSuccess(state, action: PayloadAction<any>) {
-      state.status = 'succeeded'
+    setUserDetailsSuccess(state, action: PayloadAction<UserInfo>) {
+      state.status = "succeeded"
       state.userInfo = action.payload
     },
-    setUserDetailsFail(state, action: PayloadAction<any>) {
-      state.status = 'failed'
+    setUserDetailsFail(state, action: PayloadAction<string>) {
+      state.status = "failed"
       state.error = action.payload
     },
   },
@@ -172,16 +185,16 @@ export interface userUpdateProfileState extends UserLoginState {
 }
 
 const userDetailsInitialState: userUpdateProfileState = {
-  status: 'idle',
+  status: "idle",
   userInfo: userInfoFromStorage || null,
   success: false,
 }
 
-
-export const updateUserProfile = (user: any) => async (
-  dispatch: Dispatch,
-  getState: () => State
-) => {
+export const updateUserProfile = (user: {
+  id: UserId
+  name: string
+  password: string
+}) => async (dispatch: Dispatch, getState: () => State) => {
   const {
     userLogin: { userInfo },
   } = getState()
@@ -192,7 +205,7 @@ export const updateUserProfile = (user: any) => async (
     const config = {
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${userInfo.token}`,
+        Authorization: `Bearer ${userInfo?.token}`,
       },
     }
 
@@ -210,30 +223,26 @@ export const updateUserProfile = (user: any) => async (
   }
 }
 
-
 export const userUpdateProfileSlice = createSlice({
   name: "userUpdateProfile",
   initialState: userDetailsInitialState,
   reducers: {
     setUserUpdateProfileRequest(state) {
-      state.status = 'loading'
+      state.status = "loading"
     },
     setUserUpdateProfileSuccess(state, action: PayloadAction<any>) {
-      state.status = 'succeeded'
+      state.status = "succeeded"
       state.userInfo = action.payload
       state.success = true
     },
     setUserUpdateProfileFail(state, action: PayloadAction<any>) {
-      state.status = 'failed'
+      state.status = "failed"
       state.error = action.payload
     },
   },
 })
 
-export const {
-  setUserLogout,
-} = userLoginSlice.actions
-
+export const { setUserLogout } = userLoginSlice.actions
 
 export const {
   setUserDetailsRequest,

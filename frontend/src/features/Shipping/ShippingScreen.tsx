@@ -5,9 +5,10 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import { useDispatch } from "react-redux"
 import { saveShippingAddress } from "../Cart/cartSlice"
 import CheckoutSteps from "../../components/CheckoutSteps/CheckoutSteps"
+import { History } from "history"
 
 type ShippingScreenProps = {
-  history?: any
+  history: History
 }
 
 const ShippingScreen = ({ history }: ShippingScreenProps) => {

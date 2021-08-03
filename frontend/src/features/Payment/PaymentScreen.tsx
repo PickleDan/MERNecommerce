@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { ChangeEvent, FormEvent, useState } from "react"
 import { Button, Col, Form } from "react-bootstrap"
 import FormContainer from "../../components/FormContainer"
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
@@ -45,7 +45,9 @@ const PaymentScreen = ({ history }: ShippingScreenProps) => {
               name="Способ оплаты"
               value="PayPal"
               checked
-              onChange={(e: any) => setPaymentMethod(e.target.value)}
+              onChange={(e) =>
+                setPaymentMethod(e.target.value as PaymentMethod)
+              }
             />
             {/*<Form.Check*/}
             {/*  type="radio"*/}

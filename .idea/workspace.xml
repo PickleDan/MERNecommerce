@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/CheckoutSteps/CheckoutSteps.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/features/Payment/PaymentScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CheckoutSteps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CheckoutSteps/CheckoutSteps.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Message.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/features/Cart/cartSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Cart/cartSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/Payment/PaymentScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Payment/PaymentScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/Profile/ProfileScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Profile/ProfileScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/Profile/userSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Profile/userSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/features/Shipping/ShippingScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Shipping/ShippingScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,9 +59,9 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\132\Desktop\projects\MERNecommerce\frontend\node_modules\prettier" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\132\Desktop\projects\MERNecommerce\node_modules\prettier" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="C:\Users\132\Desktop\projects\MERNecommerce\frontend\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -173,7 +171,8 @@
       <workItem from="1617302747706" duration="2297000" />
       <workItem from="1617821676208" duration="101000" />
       <workItem from="1627824212632" duration="495000" />
-      <workItem from="1627824734995" duration="8911000" />
+      <workItem from="1627824734995" duration="9078000" />
+      <workItem from="1628017844976" duration="2261000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -441,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627842094197</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Add payment screen &amp;&amp; save payment method &amp;&amp; add scss to project">
+      <created>1627845774895</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1627845774895</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +479,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Redux added to the project" />
     <MESSAGE value="Product list reducer and action" />
     <MESSAGE value="Bringing Redux State into HomeScreen" />
     <MESSAGE value="Message &amp;&amp; Loader Components" />
@@ -498,7 +503,8 @@
     <MESSAGE value="Front end user Authentication &amp; Profile" />
     <MESSAGE value="Add shipping screen and save address" />
     <MESSAGE value="Add checkout steps component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add checkout steps component" />
+    <MESSAGE value="Add payment screen &amp;&amp; save payment method &amp;&amp; add scss to project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add payment screen &amp;&amp; save payment method &amp;&amp; add scss to project" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

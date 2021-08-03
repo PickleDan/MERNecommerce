@@ -3,7 +3,12 @@ import { Form, Button, Row, Col } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
 import { State } from "../../app/store"
 import { History } from "history"
-import { getUserDetails, register, updateUserProfile } from "./userSlice"
+import {
+  getUserDetails,
+  register,
+  updateUserProfile,
+  UserId,
+} from "./userSlice"
 import Message from "../../components/Message"
 import Loader from "../../components/Loader"
 
@@ -37,11 +42,13 @@ const ProfileScreen = ({ location, history }: ProfileScreenProps) => {
     if (!userInfo) {
       history.push("/login")
     } else {
-      if (!user.name) {
-        dispatch(getUserDetails("profile"))
+      if (user && !user.name) {
+        dispatch(getUserDetails("profile" as UserId))
       } else {
-        setName(user.name)
-        setEmail(user.email)
+        if (user) {
+          setName(user.name)
+          setEmail(user.email)
+        }
       }
     }
   }, [dispatch, history, userInfo, user])
@@ -52,7 +59,9 @@ const ProfileScreen = ({ location, history }: ProfileScreenProps) => {
     if (password !== confirmPassword) {
       setMessage("Пароли не совпадают")
     } else {
-      dispatch(updateUserProfile({ id: user._id, name, password }))
+      if (user) {
+        dispatch(updateUserProfile({ id: user._id, name, password }))
+      }
     }
   }
   return (
