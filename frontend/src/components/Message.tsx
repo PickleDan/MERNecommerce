@@ -11,7 +11,7 @@ type MessageProps = {
     | "info"
     | "light"
     | "dark"
-  children: ReactChildren
+  children: ReactChildren | string
 }
 
 const Message = ({ variant, children }: MessageProps) => {
