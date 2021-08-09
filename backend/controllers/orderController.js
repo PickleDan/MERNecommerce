@@ -1,10 +1,9 @@
+import asyncHandler from "express-async-handler"
+import Order from "../models/orderModal.js"
+
 // @desc    Create new order
 // @route   POST /api/orders
 // @access  Private
-
-import asyncHandler from "express-async-handler"
-import Product from "../models/productModal"
-
 const addOrderItems = asyncHandler(async (req, res) => {
   const {
     orderItems,
