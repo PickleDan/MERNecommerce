@@ -230,7 +230,7 @@ export const userUpdateProfileSlice = createSlice({
     setUserUpdateProfileRequest(state) {
       state.status = "loading"
     },
-    setUserUpdateProfileSuccess(state, action: PayloadAction<any>) {
+    setUserUpdateProfileSuccess(state, action: PayloadAction<UserInfo>) {
       state.status = "succeeded"
       state.userInfo = action.payload
       state.success = true

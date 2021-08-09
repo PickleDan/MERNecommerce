@@ -1,14 +1,17 @@
-import { productListSlice, productDetailsSlice } from './../features/Product/productSlice';
-import { configureStore } from "@reduxjs/toolkit"
 import {
-} from "../features/Product/productSlice"
+  productListSlice,
+  productDetailsSlice,
+} from "./../features/Product/productSlice"
+import { configureStore } from "@reduxjs/toolkit"
+import {} from "../features/Product/productSlice"
 import {
   userDetailsSlice,
   userLoginSlice,
   userRegisterSlice,
-  userUpdateProfileSlice
+  userUpdateProfileSlice,
 } from "../features/Profile/userSlice"
-import { cartSlice } from '../features/Cart/cartSlice';
+import { cartSlice } from "../features/Cart/cartSlice"
+import { orderSlice } from "../features/Order/orderSlice"
 
 const store = configureStore({
   reducer: {
@@ -19,10 +22,11 @@ const store = configureStore({
     userRegister: userRegisterSlice.reducer,
     userDetails: userDetailsSlice.reducer,
     userUpdateProfile: userUpdateProfileSlice.reducer,
+    orderCreate: orderSlice.reducer,
   },
 })
 
-export type AppDispatch = typeof store.dispatch;
-export type State = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch
+export type State = ReturnType<typeof store.getState>
 
 export default store

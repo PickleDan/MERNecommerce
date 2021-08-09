@@ -88,9 +88,7 @@ export const addToCart = (id: ProductId, qty: number) => async (
   getState: () => State
 ) => {
   const { data } = await axios.get(`/api/products/${id}`)
-
   const product = productMapper(data)
-
   dispatch(
     itemAdded({
       product: product.productId,
