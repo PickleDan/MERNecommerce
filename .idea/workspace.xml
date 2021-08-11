@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/features/Order/orderSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/Cart/cartSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Cart/cartSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/Order/OrderScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Order/OrderScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/Profile/userSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Profile/userSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/orderController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/orderRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/orderRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +169,7 @@
       <workItem from="1627824734995" duration="9078000" />
       <workItem from="1628017844976" duration="2958000" />
       <workItem from="1628343706067" duration="5522000" />
-      <workItem from="1628453152693" duration="8379000" />
+      <workItem from="1628453152693" duration="9465000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -476,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628535662332</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Add a feature to create order">
+      <created>1628541473901</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1628541473901</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +511,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Run prettier on all files" />
     <MESSAGE value="Qty select &amp; add to cart button" />
     <MESSAGE value="Typescript redux actions" />
     <MESSAGE value="Add to cart functionality" />
@@ -533,7 +535,8 @@
     <MESSAGE value="Add order screen" />
     <MESSAGE value="Add order controller &amp; route" />
     <MESSAGE value="Fix orderController.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix orderController.js" />
+    <MESSAGE value="Add a feature to create order" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a feature to create order" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
