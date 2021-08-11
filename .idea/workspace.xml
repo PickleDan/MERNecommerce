@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/orderController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/orderRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/orderRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/Order/orderSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Order/orderSlice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +169,7 @@
       <workItem from="1627824734995" duration="9078000" />
       <workItem from="1628017844976" duration="2958000" />
       <workItem from="1628343706067" duration="5522000" />
-      <workItem from="1628453152693" duration="9465000" />
+      <workItem from="1628453152693" duration="11217000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -479,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628541473901</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Add method on backend &quot;Get Order by id&quot;">
+      <created>1628661454599</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1628661454599</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +518,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Qty select &amp; add to cart button" />
     <MESSAGE value="Typescript redux actions" />
     <MESSAGE value="Add to cart functionality" />
     <MESSAGE value="Cart screen" />
@@ -536,7 +542,8 @@
     <MESSAGE value="Add order controller &amp; route" />
     <MESSAGE value="Fix orderController.js" />
     <MESSAGE value="Add a feature to create order" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a feature to create order" />
+    <MESSAGE value="Add method on backend &quot;Get Order by id&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add method on backend &quot;Get Order by id&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

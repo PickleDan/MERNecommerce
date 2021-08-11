@@ -70,3 +70,57 @@ export const orderSlice = createSlice({
     })
   },
 })
+
+export type OrderDetails = {
+  orderItems: Order[]
+  shippingAddress: ShippingAddress | {}
+  status: RequestStatuses
+  error?: string
+}
+
+const orderDetailsInitialState: OrderDetails = {
+  orderItems: [],
+  shippingAddress: {},
+  status: "idle",
+}
+
+export const getOrderDetails = createAsyncThunk<
+  Order[],
+  OrderId,
+  { state: State }
+>("order/getOrderDetails", async (orderId, thunkAPI) => {
+  const {
+    userLogin: { userInfo },
+  } = thunkAPI.getState()
+
+  const config = {
+    headers: {
+      Authorization: `Bearer ${userInfo?.token}`,
+    },
+  }
+  const { data } = await axios.get(`/api/orders/${orderId}`, config)
+
+  return data
+})
+
+export const orderDetailsSlice = createSlice({
+  name: "orderDetails",
+  initialState: orderDetailsInitialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(getOrderDetails.pending, (state) => {
+      state.status = "loading"
+    })
+    builder.addCase(
+      getOrderDetails.fulfilled,
+      (state, action: PayloadAction<Order[]>) => {
+        state.status = "succeeded"
+        state.orderItems = action.payload
+      }
+    )
+    builder.addCase(getOrderDetails.rejected, (state) => {
+      state.status = "failed"
+      state.error = "Произошла ошибка при формировании заказа"
+    })
+  },
+})
