@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="Implement orderPaySlice &amp; add thunk function payOrder()">
+    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="Add PayPal payments">
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/Order/OrderScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Order/OrderScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/PlaceOrder/orderSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/PlaceOrder/orderSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,21 +170,7 @@
       <workItem from="1628017844976" duration="2958000" />
       <workItem from="1628343706067" duration="5522000" />
       <workItem from="1628453152693" duration="12055000" />
-      <workItem from="1628943914787" duration="18402000" />
-    </task>
-    <task id="LOCAL-00003" summary="add cards of products">
-      <created>1601715909559</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1601715909559</updated>
-    </task>
-    <task id="LOCAL-00004" summary="add unversioned files">
-      <created>1601715951286</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1601715951286</updated>
+      <workItem from="1628943914787" duration="19325000" />
     </task>
     <task id="LOCAL-00005" summary="Implement react-router">
       <created>1601726938025</created>
@@ -518,7 +501,21 @@
       <option name="project" value="LOCAL" />
       <updated>1628973949510</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Add PayPal payments">
+      <created>1628981061335</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1628981061335</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Update .gitignore">
+      <created>1628981830056</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1628981830057</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,8 +547,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Generate a JSON web token" />
-    <MESSAGE value="Custom authentication middleware" />
     <MESSAGE value="User registration &amp; password encryption" />
     <MESSAGE value="User login state" />
     <MESSAGE value="User login screen &amp; functionality" />
@@ -575,7 +570,9 @@
     <MESSAGE value="Add README.md" />
     <MESSAGE value="Add updateOrderToPaid method to backend" />
     <MESSAGE value="Implement orderPaySlice &amp; add thunk function payOrder()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement orderPaySlice &amp; add thunk function payOrder()" />
+    <MESSAGE value="Add PayPal payments" />
+    <MESSAGE value="Update .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update .gitignore" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
