@@ -17,4 +17,4 @@ There is completely customized eCommerce / shopping cart application from scratc
 - Custom database seeder script
 
 
-## To run project in dev environment, you should run `npm run dev`. This command starts as frontend as backend
+## To run the project in dev environment, you should run `npm run dev`. This command starts as frontend as backend
