@@ -127,3 +127,67 @@ export const orderDetailsSlice = createSlice({
     })
   },
 })
+
+type PayOrder = {
+  orderId: OrderId
+  paymentResult: any
+}
+
+export const payOrder = createAsyncThunk<any, PayOrder, { state: State }>(
+  "order/getOrderDetails",
+  async (params, thunkAPI) => {
+    const {
+      userLogin: { userInfo },
+    } = thunkAPI.getState()
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${userInfo?.token}`,
+      },
+    }
+    const { data } = await axios.put(
+      `/api/orders/${params.orderId}/pay`,
+      params.paymentResult,
+      config
+    )
+
+    return data
+  }
+)
+
+type OrderPay = {
+  status: RequestStatuses
+  pay?: any
+  error?: string
+}
+
+const orderPayInitialState: OrderPay = {
+  status: "idle",
+}
+
+export const orderPaySlice = createSlice({
+  name: "orderDetails",
+  initialState: orderPayInitialState,
+  reducers: {
+    orderPayReset(state) {
+      state.pay = {}
+    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(payOrder.pending, (state) => {
+      state.status = "loading"
+    })
+    builder.addCase(
+      payOrder.fulfilled,
+      (state, action: PayloadAction<Order>) => {
+        state.status = "succeeded"
+        state.pay = action.payload
+      }
+    )
+    builder.addCase(payOrder.rejected, (state) => {
+      state.status = "failed"
+      state.error = "Произошла ошибка при оплате"
+    })
+  },
+})

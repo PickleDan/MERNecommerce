@@ -21,7 +21,7 @@ const OrderScreen = ({ match }: OrderScreenProps) => {
     if (!order || order._id !== orderId) {
       dispatch(getOrderDetails(orderId))
     }
-  }, [orderId])
+  }, [orderId, dispatch])
 
   if (!order) return null
   const user = order.user

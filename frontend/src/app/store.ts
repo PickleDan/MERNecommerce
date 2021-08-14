@@ -13,6 +13,7 @@ import {
 import { cartSlice } from "../features/Cart/cartSlice"
 import {
   orderDetailsSlice,
+  orderPaySlice,
   orderSlice,
 } from "../features/PlaceOrder/orderSlice"
 
@@ -27,6 +28,7 @@ const store = configureStore({
     userUpdateProfile: userUpdateProfileSlice.reducer,
     orderCreate: orderSlice.reducer,
     orderDetails: orderDetailsSlice.reducer,
+    orderPay: orderPaySlice.reducer,
   },
 })
 
