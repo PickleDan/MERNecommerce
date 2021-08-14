@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/features/PlaceOrder/PlaceOrderScreen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CheckoutSteps/CheckoutSteps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CheckoutSteps/CheckoutSteps.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/FormContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FormContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Message.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/Order/OrderScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Order/OrderScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/Order/orderSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/PlaceOrder/orderSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/Shipping/ShippingScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Shipping/ShippingScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +169,7 @@
       <workItem from="1628017844976" duration="2958000" />
       <workItem from="1628343706067" duration="5522000" />
       <workItem from="1628453152693" duration="12055000" />
-      <workItem from="1628943914787" duration="7725000" />
+      <workItem from="1628943914787" duration="8615000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -503,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628713423781</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Add check for order">
+      <created>1628966186384</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1628966186384</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,7 +532,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add to cart functionality" />
     <MESSAGE value="Cart screen" />
     <MESSAGE value="Remove items from cart" />
     <MESSAGE value="Clean up by using controllers" />
@@ -560,7 +556,8 @@
     <MESSAGE value="Add a feature to create order" />
     <MESSAGE value="Add method on backend &quot;Get Order by id&quot;" />
     <MESSAGE value="Implement orderDetailsSlice for order screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement orderDetailsSlice for order screen" />
+    <MESSAGE value="Add check for order" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add check for order" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
