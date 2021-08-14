@@ -4,6 +4,7 @@ import axios from "axios"
 import { Brand, RequestStatuses } from "../../common/types"
 import { fetchListProducts, ProductDetails } from "../Product/productSlice"
 import { CartItem, PaymentMethod, ShippingAddress } from "../Cart/cartSlice"
+import { UserInfo } from "../Profile/userSlice"
 
 export type OrderId = Brand<string, "order_id">
 
@@ -15,6 +16,11 @@ export type Order = {
   itemsPrice: number
   shippingPrice: number
   totalPrice: number
+  user?: UserInfo
+  isPaid: boolean
+  paidAt?: string
+  isDelivered?: boolean
+  deliveredAt?: string
 }
 
 export const createOrder = createAsyncThunk<
@@ -72,20 +78,17 @@ export const orderSlice = createSlice({
 })
 
 export type OrderDetails = {
-  orderItems: Order[]
-  shippingAddress: ShippingAddress | {}
   status: RequestStatuses
+  order?: Order
   error?: string
 }
 
 const orderDetailsInitialState: OrderDetails = {
-  orderItems: [],
-  shippingAddress: {},
   status: "idle",
 }
 
 export const getOrderDetails = createAsyncThunk<
-  Order[],
+  Order,
   OrderId,
   { state: State }
 >("order/getOrderDetails", async (orderId, thunkAPI) => {
@@ -113,9 +116,9 @@ export const orderDetailsSlice = createSlice({
     })
     builder.addCase(
       getOrderDetails.fulfilled,
-      (state, action: PayloadAction<Order[]>) => {
+      (state, action: PayloadAction<Order>) => {
         state.status = "succeeded"
-        state.orderItems = action.payload
+        state.order = action.payload
       }
     )
     builder.addCase(getOrderDetails.rejected, (state) => {

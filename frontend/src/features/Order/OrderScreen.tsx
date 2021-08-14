@@ -1,79 +1,98 @@
 import React, { useEffect } from "react"
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
-import { Link } from "react-router-dom"
-import CheckoutSteps from "../../components/CheckoutSteps/CheckoutSteps"
-import { Col, ListGroup, Row, Image, Button, Card } from "react-bootstrap"
+import { Link, match } from "react-router-dom"
+import { Card, Col, Image, ListGroup, Row } from "react-bootstrap"
 import Message from "../../components/Message"
-import { createOrder, OrderId } from "./orderSlice"
-import { History } from "history"
+import { getOrderDetails, OrderId } from "../PlaceOrder/orderSlice"
+import Loader from "../../components/Loader"
 
 type OrderScreenProps = {
-  history: History
+  match: match<{ id: OrderId }>
 }
 
-const OrderScreen = ({ history }: OrderScreenProps) => {
-  const cart = useAppSelector((state) => state.cart)
+const OrderScreen = ({ match }: OrderScreenProps) => {
+  const orderId = match.params.id
+
+  const orderDetails = useAppSelector((state) => state.orderDetails)
+  const { order, status, error } = orderDetails
+
   const dispatch = useAppDispatch()
-
-  const addDecimals = (num: number) => Math.round(num * 100) / 100
-
-  //  Calculate prices
-  const itemsPrice = addDecimals(
-    cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
-  )
-  const shippingPrice = addDecimals(+itemsPrice > 500 ? 0 : 100)
-  const totalPrice = itemsPrice + shippingPrice
-
-  const { status, error, order } = useAppSelector((state) => state.orderCreate)
-
   useEffect(() => {
-    if (status === "succeeded" && order) {
-      history.push(`/order/${order._id}`)
+    if (!order || order._id !== orderId) {
+      dispatch(getOrderDetails(orderId))
     }
-  }, [status, history])
+  }, [orderId])
 
-  const placeOrderHandler = () => {
-    dispatch(
-      createOrder({
-        orderItems: cart.cartItems,
-        shippingAddress: cart.shippingAddress,
-        paymentMethod: cart.paymentMethod,
-        itemsPrice,
-        shippingPrice,
-        totalPrice,
-      })
+  if (!order) return null
+  const user = order.user
+
+  let itemsPrice: number = 0
+  if (status !== "loading") {
+    const addDecimals = (num: number) => Math.round(num * 100) / 100
+    //  Calculate prices
+    itemsPrice = addDecimals(
+      order.orderItems.reduce((acc, item) => acc + item.price * item.qty, 0)
     )
   }
 
-  return (
+  return status === "loading" ? (
+    <Loader />
+  ) : status === "failed" ? (
+    <Message variant={"danger"}>{error}</Message>
+  ) : (
     <>
-      <CheckoutSteps step1 step2 step3 step4 />
+      <h1>Заказ #{order._id}</h1>
       <Row>
         <Col md={8}>
           <ListGroup variant="flush">
             <ListGroup.Item>
               <h2>Доставка</h2>
+              {user && (
+                <>
+                  <p>
+                    <strong>Пользователь: </strong> {user.name}
+                  </p>
+                  <p>
+                    <strong>Email: </strong>
+                    <a href={`mailto:${user.email}`}>{user.email}</a>
+                  </p>
+                </>
+              )}
               <p>
-                <strong>Адрес:</strong>
-                {cart.shippingAddress.address}, {cart.shippingAddress.city},{" "}
-                {cart.shippingAddress.postalCode},{" "}
-                {cart.shippingAddress.country}
+                <strong>Адрес: </strong>
+                {order.shippingAddress.address}, {order.shippingAddress.city},{" "}
+                {order.shippingAddress.postalCode},{" "}
+                {order.shippingAddress.country}
               </p>
+              {order.isDelivered ? (
+                <Message variant={"success"}>
+                  Доставлен {order.deliveredAt}
+                </Message>
+              ) : (
+                <Message variant={"danger"}>Не доставлен</Message>
+              )}
             </ListGroup.Item>
 
             <ListGroup.Item>
               <h2>Способ оплаты</h2>
-              <strong>Оплата: </strong>
-              {cart.paymentMethod}
+              <p>
+                <strong>Оплата: </strong>
+                {order.paymentMethod}
+              </p>
+              {order.isPaid ? (
+                <Message variant={"success"}>Оплачен {order.paidAt}</Message>
+              ) : (
+                <Message variant={"danger"}>Не оплачен</Message>
+              )}
             </ListGroup.Item>
 
             <ListGroup.Item>
               <h2>Список товаров</h2>
-              {cart.cartItems.length === 0 ? (
-                <Message>Ваша корзина пуста</Message>
+              {order.orderItems.length === 0 ? (
+                <Message>Заказ не сформирован</Message>
               ) : (
                 <ListGroup variant={"flush"}>
-                  {cart.cartItems.map((item, index) => (
+                  {order.orderItems.map((item, index) => (
                     <ListGroup.Item key={index}>
                       <Row>
                         <Col md={1}>
@@ -110,35 +129,24 @@ const OrderScreen = ({ history }: OrderScreenProps) => {
               <ListGroup.Item>
                 <Row>
                   <Col>Товары</Col>
-                  <Col>{itemsPrice} ₽</Col>
+                  {itemsPrice && <Col>{itemsPrice} ₽</Col>}
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
                   <Col>Доставка</Col>
-                  <Col>{shippingPrice} ₽</Col>
+                  <Col>{order.shippingPrice} ₽</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
                   <Col>Итого</Col>
-                  <Col>{totalPrice} ₽</Col>
+                  <Col>{order.totalPrice} ₽</Col>
                 </Row>
               </ListGroup.Item>
 
               <ListGroup.Item>
                 {error && <Message variant="danger">{error}</Message>}
-              </ListGroup.Item>
-
-              <ListGroup.Item>
-                <Button
-                  type="button"
-                  className={"btn-block"}
-                  disabled={cart.cartItems.length == 0}
-                  onClick={placeOrderHandler}
-                >
-                  Сделать заказ
-                </Button>
               </ListGroup.Item>
             </ListGroup>
           </Card>

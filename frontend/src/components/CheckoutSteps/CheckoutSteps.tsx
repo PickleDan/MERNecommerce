@@ -30,19 +30,19 @@ const CheckoutSteps = ({
       <Nav.Item>
         {step2 ? (
           <LinkContainer to="/shipping">
-            <Nav.Link className="link">Доставка</Nav.Link>
+            <Nav.Link className="link">Адрес доставка</Nav.Link>
           </LinkContainer>
         ) : (
-          <Nav.Link disabled>Доставка</Nav.Link>
+          <Nav.Link disabled>Адрес доставка</Nav.Link>
         )}
       </Nav.Item>
       <Nav.Item>
         {step3 ? (
           <LinkContainer to="/payment">
-            <Nav.Link className="link">Оплата</Nav.Link>
+            <Nav.Link className="link">Способ оплаты</Nav.Link>
           </LinkContainer>
         ) : (
-          <Nav.Link disabled>Оплата</Nav.Link>
+          <Nav.Link disabled>Способ оплаты</Nav.Link>
         )}
       </Nav.Item>
       <Nav.Item>

@@ -11,7 +11,10 @@ import {
   userUpdateProfileSlice,
 } from "../features/Profile/userSlice"
 import { cartSlice } from "../features/Cart/cartSlice"
-import { orderDetailsSlice, orderSlice } from "../features/Order/orderSlice"
+import {
+  orderDetailsSlice,
+  orderSlice,
+} from "../features/PlaceOrder/orderSlice"
 
 const store = configureStore({
   reducer: {
@@ -23,7 +26,7 @@ const store = configureStore({
     userDetails: userDetailsSlice.reducer,
     userUpdateProfile: userUpdateProfileSlice.reducer,
     orderCreate: orderSlice.reducer,
-    orderDetailsSlice: orderDetailsSlice.reducer,
+    orderDetails: orderDetailsSlice.reducer,
   },
 })
 
