@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +64,11 @@
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\backend\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\132\Desktop\projects\MERNecommerce" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\src\components\CheckoutSteps" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\public" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\src\actions" />
       <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\src" />
-      <recent name="C:\Users\132\Desktop\projects\MERNecommerce\frontend\public\images" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -169,7 +169,7 @@
       <workItem from="1628017844976" duration="2958000" />
       <workItem from="1628343706067" duration="5522000" />
       <workItem from="1628453152693" duration="12055000" />
-      <workItem from="1628943914787" duration="8615000" />
+      <workItem from="1628943914787" duration="9711000" />
     </task>
     <task id="LOCAL-00001" summary="add bootstrap, header layout">
       <created>1601663466629</created>
@@ -500,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628966186384</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Clear and move README.md">
+      <created>1628967153826</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1628967153826</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +539,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Cart screen" />
     <MESSAGE value="Remove items from cart" />
     <MESSAGE value="Clean up by using controllers" />
     <MESSAGE value="User authentication endpoint" />
@@ -557,7 +563,8 @@
     <MESSAGE value="Add method on backend &quot;Get Order by id&quot;" />
     <MESSAGE value="Implement orderDetailsSlice for order screen" />
     <MESSAGE value="Add check for order" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add check for order" />
+    <MESSAGE value="Clear and move README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clear and move README.md" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
