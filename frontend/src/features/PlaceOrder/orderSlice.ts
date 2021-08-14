@@ -134,7 +134,7 @@ type PayOrder = {
 }
 
 export const payOrder = createAsyncThunk<any, PayOrder, { state: State }>(
-  "order/getOrderDetails",
+  "order/payOrder",
   async (params, thunkAPI) => {
     const {
       userLogin: { userInfo },
@@ -156,22 +156,20 @@ export const payOrder = createAsyncThunk<any, PayOrder, { state: State }>(
   }
 )
 
-type OrderPay = {
+type OrderPay = Partial<{
   status: RequestStatuses
-  pay?: any
-  error?: string
-}
+  pay: any
+  error: string
+}>
 
-const orderPayInitialState: OrderPay = {
-  status: "idle",
-}
+const orderPayInitialState: OrderPay = {}
 
 export const orderPaySlice = createSlice({
   name: "orderDetails",
   initialState: orderPayInitialState,
   reducers: {
     orderPayReset(state) {
-      state.pay = {}
+      state.status = "idle"
     },
   },
   extraReducers: (builder) => {
@@ -191,3 +189,5 @@ export const orderPaySlice = createSlice({
     })
   },
 })
+
+export const { orderPayReset } = orderPaySlice.actions

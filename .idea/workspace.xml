@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="">
+    <list default="true" id="b47c7fab-481e-40cd-83ca-f09798075c7b" name="Default Changelist" comment="Implement orderPaySlice &amp; add thunk function payOrder()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/features/Order/OrderScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/Order/OrderScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/features/PlaceOrder/orderSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/PlaceOrder/orderSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,14 +173,7 @@
       <workItem from="1628017844976" duration="2958000" />
       <workItem from="1628343706067" duration="5522000" />
       <workItem from="1628453152693" duration="12055000" />
-      <workItem from="1628943914787" duration="11725000" />
-    </task>
-    <task id="LOCAL-00002" summary="add cards of products">
-      <created>1601715714425</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1601715714425</updated>
+      <workItem from="1628943914787" duration="18402000" />
     </task>
     <task id="LOCAL-00003" summary="add cards of products">
       <created>1601715909559</created>
@@ -516,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628972585831</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Implement orderPaySlice &amp; add thunk function payOrder()">
+      <created>1628973949509</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1628973949510</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +550,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="User authentication endpoint" />
     <MESSAGE value="Generate a JSON web token" />
     <MESSAGE value="Custom authentication middleware" />
     <MESSAGE value="User registration &amp; password encryption" />
@@ -573,7 +574,8 @@
     <MESSAGE value="Clear and move README.md" />
     <MESSAGE value="Add README.md" />
     <MESSAGE value="Add updateOrderToPaid method to backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add updateOrderToPaid method to backend" />
+    <MESSAGE value="Implement orderPaySlice &amp; add thunk function payOrder()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement orderPaySlice &amp; add thunk function payOrder()" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
