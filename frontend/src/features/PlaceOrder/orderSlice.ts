@@ -226,7 +226,11 @@ const orderListMyInitial: OrderListMy = {
 export const orderListMySlice = createSlice({
   name: "orderDetails",
   initialState: orderListMyInitial,
-  reducers: {},
+  reducers: {
+    myOrderListReset(state) {
+      state.orders = []
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(getMyOrders.pending, (state) => {
       state.status = "loading"
@@ -244,3 +248,5 @@ export const orderListMySlice = createSlice({
     })
   },
 })
+
+export const { myOrderListReset } = orderListMySlice.actions

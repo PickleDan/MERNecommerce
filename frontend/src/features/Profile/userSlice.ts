@@ -4,6 +4,7 @@ import { Brand, RequestStatuses } from "./../../common/types"
 import axios from "axios"
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { CartItem } from "../Cart/cartSlice"
+import { myOrderListReset, orderListMySlice } from "../PlaceOrder/orderSlice"
 
 export type UserId = Brand<string, "user_id">
 
@@ -47,6 +48,8 @@ export const login = createAsyncThunk(
 export const logout = () => (dispatch: Dispatch) => {
   localStorage.removeItem("userInfo")
   dispatch(setUserLogout())
+  dispatch(userDetailsReset())
+  dispatch(myOrderListReset())
 }
 
 export const userLoginSlice = createSlice({
@@ -177,6 +180,9 @@ export const userDetailsSlice = createSlice({
       state.status = "failed"
       state.error = action.payload
     },
+    userDetailsReset(state) {
+      state.userInfo = null
+    },
   },
 })
 
@@ -248,6 +254,7 @@ export const {
   setUserDetailsRequest,
   setUserDetailsSuccess,
   setUserDetailsFail,
+  userDetailsReset,
 } = userDetailsSlice.actions
 
 export const {
