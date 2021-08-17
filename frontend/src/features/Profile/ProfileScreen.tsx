@@ -1,5 +1,5 @@
 import React, { FormEvent, useEffect, useState } from "react"
-import { Form, Button, Row, Col } from "react-bootstrap"
+import { Form, Button, Row, Col, Table } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
 import { State } from "../../app/store"
 import { History } from "history"
@@ -11,6 +11,8 @@ import {
 } from "./userSlice"
 import Message from "../../components/Message"
 import Loader from "../../components/Loader"
+import { getMyOrders } from "../PlaceOrder/orderSlice"
+import { LinkContainer } from "react-router-bootstrap"
 
 type ProfileScreenProps = {
   location: Location
@@ -36,12 +38,19 @@ const ProfileScreen = ({ location, history }: ProfileScreenProps) => {
   const userUpdateProfile = useSelector(
     (state: State) => state.userUpdateProfile
   )
+
+  const { status: loadingOrders, error: errorOrders, orders } = useSelector(
+    (state: State) => state.orderListMy
+  )
+
   const { success } = userUpdateProfile
 
   useEffect(() => {
+    dispatch(getMyOrders())
     if (!userInfo) {
       history.push("/login")
     } else {
+      dispatch(getMyOrders())
       if (user && !user.name) {
         dispatch(getUserDetails("profile" as UserId))
       } else {
@@ -120,6 +129,55 @@ const ProfileScreen = ({ location, history }: ProfileScreenProps) => {
       </Col>
       <Col md={9}>
         <h2>Мои заказы</h2>
+
+        {status === "loading" ? (
+          <Loader />
+        ) : status === "failed" ? (
+          <Message>{errorOrders}</Message>
+        ) : (
+          <Table striped bordered hover responsive className="table-sm">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>ДАТА</th>
+                <th>ИТОГО</th>
+                <th>ОПЛАТА</th>
+                <th>ДОСТАВКА</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {orders.map((order) => (
+                <tr key={order._id}>
+                  <td>{order._id}</td>
+                  <td>{order.createdAt?.substring(0, 10)}</td>
+                  <td>{order.totalPrice}</td>
+                  <td>
+                    {order.isPaid ? (
+                      order.paidAt?.substring(0, 10)
+                    ) : (
+                      <i className="fas fa-times" style={{ color: "red" }} />
+                    )}
+                  </td>
+                  <td>
+                    {order.isDelivered ? (
+                      order.deliveredAt?.substring(0, 10)
+                    ) : (
+                      <i className="fas fa-times" style={{ color: "red" }} />
+                    )}
+                  </td>
+                  <td>
+                    <LinkContainer to={`/order/${order._id}`}>
+                      <Button className="btn-sm" variant="light">
+                        Подробнее
+                      </Button>
+                    </LinkContainer>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        )}
       </Col>
     </Row>
   )

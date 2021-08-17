@@ -5,6 +5,7 @@ import { Brand, RequestStatuses } from "../../common/types"
 import { fetchListProducts, ProductDetails } from "../Product/productSlice"
 import { CartItem, PaymentMethod, ShippingAddress } from "../Cart/cartSlice"
 import { UserInfo } from "../Profile/userSlice"
+import { Dispatch } from "redux"
 
 export type OrderId = Brand<string, "order_id">
 
@@ -16,6 +17,7 @@ export type Order = {
   itemsPrice: number
   shippingPrice: number
   totalPrice: number
+  createdAt: string
   user?: UserInfo
   isPaid: boolean
   paidAt?: string
@@ -191,3 +193,54 @@ export const orderPaySlice = createSlice({
 })
 
 export const { orderPayReset } = orderPaySlice.actions
+
+export const getMyOrders = createAsyncThunk<
+  any,
+  void,
+  { state: State; dispatch: Dispatch }
+>("order/payOrder", async (params, thunkAPI) => {
+  const {
+    userLogin: { userInfo },
+  } = thunkAPI.getState()
+
+  const config = {
+    headers: {
+      Authorization: `Bearer ${userInfo?.token}`,
+    },
+  }
+  const { data } = await axios.get(`/api/orders/myorders`, config)
+
+  return data
+})
+
+type OrderListMy = {
+  orders: Order[]
+  status: RequestStatuses
+  error?: string
+}
+
+const orderListMyInitial: OrderListMy = {
+  orders: [],
+  status: "idle",
+}
+export const orderListMySlice = createSlice({
+  name: "orderDetails",
+  initialState: orderListMyInitial,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(getMyOrders.pending, (state) => {
+      state.status = "loading"
+    })
+    builder.addCase(
+      getMyOrders.fulfilled,
+      (state, action: PayloadAction<Order[]>) => {
+        state.status = "succeeded"
+        state.orders = action.payload
+      }
+    )
+    builder.addCase(getMyOrders.rejected, (state) => {
+      state.status = "failed"
+      state.error = "Произошла ошибка при загрузке товаров"
+    })
+  },
+})
